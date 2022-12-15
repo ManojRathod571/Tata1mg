@@ -59,11 +59,11 @@ const LozengesCard = ({ something, prodVal = 6 }) => {
           >
             <Image h={"35%"} w={"60%"} m="auto" src={e.img} />
             <Box>
-              <Text fontSize={"15px"}>{e.name}</Text>
-              <Text fontSize={"13px"}>{e.qty}</Text>
+              <Text fontSize={"14px"}>{e.name}</Text>
+              <Text fontSize={"12px"}>{e.qty}</Text>
               <Text >
-                <Text fontSize={"17px"}>MRP</Text>
-                <span style={{ textDecoration: "line-through", fontSize: "17px" }}>
+                <Text fontSize={"16px"}>MRP</Text>
+                <span style={{ textDecoration: "line-through", fontSize: "16px" }}>
                   ₹{e.strikePrice}
                 </span>
                 <span style={{ color: "green", marginLeft: "1rem" }}>

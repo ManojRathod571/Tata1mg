@@ -3,17 +3,22 @@
 import { Box, Button, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import BrandsCard from "../cards/BrandCard";
+import CalciumCard from "../cards/CalciumCard";
 import CheckupCard from "../cards/CheckupCard";
 import ComboCard from "../cards/ComboCard";
+import DealsCard from "../cards/DealsCard";
 import Description from "../cards/Description";
 import LozengesCard from "../cards/LozengesCard";
 import Popularcategories from "../cards/PopularcategoriesCard";
 import ProductsCard from "../cards/ProductsCard";
 import SpotlightCard from "../cards/SpotlightCard";
 import SugarSubstitutesCard from "../cards/SugarSubstitutesCard";
+import TrendingCard from "../cards/TrendingCard";
 import Carosel from "../crousel/crousel";
 import {
+  Calcium,
   datalist,
+  Deals,
   FeaturedBrands,
   health,
   Lozenges,
@@ -23,6 +28,7 @@ import {
   Spotlight,
   Sugarsubstitutes,
   topSellingProducts,
+  Trending,
   WinterCollection,
 } from "../Data/products.data";
 
@@ -450,6 +456,157 @@ const ALLProductsBrands = () => {
           </Box>
           <SpotlightCard something={Spotlight} />
         </Box>
+
+        {/* Calcium */}
+
+        <Box mt="2rem" border="solid green 1px">
+          <Box w="85%" margin="auto"
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            mb="0.5rem"
+          >
+            <Text fontWeight={"400"} lineHeight={"26px"} fontSize={"22px"}>
+              Calcium | supplement of the week
+            </Text>
+            <Link href="http://localhost:3000/allProducts" target="_blank" textDecoration="none" >
+              <Button
+                bgColor="#ff6f61"
+                _hover={{ bg: "#ff6f61" }}
+                width="fit-content"
+                color="white"
+                borderColor="transparent"
+                borderRadius="5px"
+                cursor="pointer"
+                padding="10px"
+              >
+                SEE ALL
+              </Button>
+            </Link>
+          </Box>
+          <CalciumCard something={Calcium} />
+        </Box>
+
+
+        {/* Featured Brands */}
+
+        <Box mt="2rem">
+          <Box w="85%" margin="auto" display="flex" justifyContent="space-between" alignItems="center">
+            <Text fontWeight={"400"} lineHeight={"26px"} fontSize={"22px"}>
+              Featured Brands
+            </Text>
+            <Link href="http://localhost:3000/allProducts" target="_blank" textDecoration="none">
+              <Button
+                bgColor="#ff6f61"
+                _hover={{ bg: "#ff6f61" }}
+                width="fit-content"
+                color="white"
+                borderColor="transparent"
+                borderRadius="5px"
+                cursor="pointer"
+                padding="10px"
+              >
+                SEE ALL
+              </Button>
+            </Link>
+          </Box>
+          <BrandsCard something={FeaturedBrands} />
+        </Box>
+
+
+        {/* Trending */}
+
+
+        <Box mt="2rem" border="solid green 1px">
+          <Box w="85%" margin="auto"
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            mb="0.5rem"
+          >
+            <Text fontWeight={"400"} lineHeight={"26px"} fontSize={"22px"}>
+              Trending now
+            </Text>
+            <Link href="http://localhost:3000/allProducts" target="_blank" textDecoration="none" >
+              <Button
+                bgColor="#ff6f61"
+                _hover={{ bg: "#ff6f61" }}
+                width="fit-content"
+                color="white"
+                borderColor="transparent"
+                borderRadius="5px"
+                cursor="pointer"
+                padding="10px"
+              >
+                SEE ALL
+              </Button>
+            </Link>
+          </Box>
+          <TrendingCard something={Trending} />
+        </Box>
+
+
+        {/* Deals */}
+
+        <Box mt="2rem" border="solid green 1px">
+          <Box w="85%" margin="auto"
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            mb="0.5rem"
+          >
+            <Text fontWeight={"400"} lineHeight={"26px"} fontSize={"22px"}>
+              Deals of the day
+            </Text>
+            <Link href="http://localhost:3000/allProducts" target="_blank" textDecoration="none" >
+              <Button
+                bgColor="#ff6f61"
+                _hover={{ bg: "#ff6f61" }}
+                width="fit-content"
+                color="white"
+                borderColor="transparent"
+                borderRadius="5px"
+                cursor="pointer"
+                padding="10px"
+              >
+                SEE ALL
+              </Button>
+            </Link>
+          </Box>
+          <DealsCard something={Deals} />
+        </Box>
+
+
+        {/* Super Saving Deals (LOZENGES data) */}
+
+        <Box mt="2rem" border="solid green 1px">
+          <Box w="85%" margin="auto"
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            mb="0.5rem"
+          >
+            <Text fontWeight={"400"} lineHeight={"26px"} fontSize={"22px"}>
+              Super saving deals
+            </Text>
+            <Link href="http://localhost:3000/allProducts" target="_blank" textDecoration="none" >
+              <Button
+                bgColor="#ff6f61"
+                _hover={{ bg: "#ff6f61" }}
+                width="fit-content"
+                color="white"
+                borderColor="transparent"
+                borderRadius="5px"
+                cursor="pointer"
+                padding="10px"
+              >
+                SEE ALL
+              </Button>
+            </Link>
+          </Box>
+          <LozengesCard something={Lozenges} />
+        </Box>
+
 
         {/* Description */}
 

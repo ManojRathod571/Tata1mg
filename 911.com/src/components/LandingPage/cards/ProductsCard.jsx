@@ -57,8 +57,8 @@ const ProductsCard = ({ something, prodVal = 6 }) => {
                     >
                         <Image h={"40%"} w={"60%"} m="auto" src={e.img} />
                         <Box>
-                            <Text fontSize={"15px"}>{e.name}</Text>
-                            <Text fontSize={"13px"}>{e.qty}</Text>
+                            <Text fontSize={"14px"}>{e.name}</Text>
+                            <Text fontSize={"12px"}>{e.qty}</Text>
                             <Text>
                                 MRP{" "}
                                 <span style={{ textDecoration: "line-through" }}>
