@@ -19,7 +19,6 @@ import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Link as BrowseLink,} from "react-router-dom";
-import Navbar from "../components/Navbar";
 import { Signup } from "../store/Authreducer/action";
 
 
@@ -29,7 +28,7 @@ export default function SignupCard() {
   const [userData, setUserData] = useState({});
   
   const toast = useToast()
-  const {isLoading}=useSelector((store)=>store.authreducer)
+  const {isLoading}=useSelector((store)=>store.Authreducer)
   //console.log(isLoading)
 
   const handleChange = (e) => {
@@ -90,7 +89,6 @@ export default function SignupCard() {
 
   return (
     <>
-      <Navbar />
       <Flex
         minH={"100vh"}
         align={"center"}
@@ -127,10 +125,10 @@ export default function SignupCard() {
                     </FormControl>
                   </Box>
                   <Box>
-                    <FormControl id="profile_pic">
-                      <FormLabel>Profile_pic</FormLabel>
+                    <FormControl id="age" isRequired>
+                      <FormLabel>Age</FormLabel>
                       <Input
-                        type="file"
+                        type="text"
                         name="profile_pic"
                         onChange={handleChange}
                       />
@@ -167,10 +165,10 @@ export default function SignupCard() {
                     p={{ base: "1rem 1rem", lg: "1rem 2rem", xl: "1rem 2rem" }}
                     loadingText="Submitting"
                     size="lg"
-                    bg={"blue.400"}
+                    bg={"#ff6f61"}
                     color={"white"}
                     _hover={{
-                      bg: "blue.500",
+                      bg: "#ff6f60",
                     }}
                     type="submit"
                    isLoading={isLoading}
