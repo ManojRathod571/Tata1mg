@@ -352,7 +352,7 @@ const ALLProductsBrands = () => {
             mb="0.5rem"
           >
             <Text fontWeight={"400"} lineHeight={"26px"} fontSize={"22px"}>
-              Diabetic medicines
+              Diabetes medicines
             </Text>
             <Link href="http://localhost:3000/allProducts" target="_blank" textDecoration="none" >
               <Button
