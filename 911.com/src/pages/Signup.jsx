@@ -50,7 +50,7 @@ export default function SignupCard() {
      setisInvalid(true)
      toast({
       title: "Invalid Phone Number",
-      description: "Phone Number can't be less than 10-digit",
+      description: "Phone Number cannot be less than 10-digit",
       status: 'error',
       position: 'top',
       duration: 5000,

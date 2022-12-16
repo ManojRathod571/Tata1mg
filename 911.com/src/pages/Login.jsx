@@ -45,7 +45,6 @@ import { Signin, Signin_failure } from "../store/Authreducer/action";
       e.preventDefault();
       if(!isAuth){
         dispatch(Signin(userData)).then((res)=>{
-            console.log(res.m)
             if(res){
               toast({
                 title: "Signin Successfull",

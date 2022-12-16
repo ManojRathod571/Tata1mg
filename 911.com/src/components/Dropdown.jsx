@@ -1,14 +1,11 @@
 import { NavLink } from "react-router-dom"
 import styles from "../styles/Navbar.module.css"
-import {BiSearch} from "react-icons/bi"
-import {HiShoppingBag} from 'react-icons/hi'
-import {AiOutlineHeart} from "react-icons/ai"
-import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
-import { Box, Flex, HStack, Menu, MenuButton, MenuItem, MenuList, Text, useDisclosure, VStack } from '@chakra-ui/react';
+
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { Box, Flex,Text } from '@chakra-ui/react';
 
 
 export const Dropdown=()=>{
-    const { isOpen, onOpen, onClose } = useDisclosure()
     return <Box className={styles.dropdown_container}>
         <Flex gap={3} flexWrap="wrap" padding={0} justifyContent='center'>
             <Box className={styles.dropdown_category_hoverbox_container}>
@@ -628,9 +625,9 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Covid Essentials{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
+                <Box className={`${styles.main_category}`}><NavLink><Text>Covid Essentials{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
-                <Box className={styles.hover_box} >
+                <Box className={`${styles.hover_box} ${styles.covid_box}`} >
                     <Box display='flex' gap={3}  padding='8px'>
                         <Box className={styles.hover_sub_category_box}   border='none'>
                             <Box  className={styles.border}>
