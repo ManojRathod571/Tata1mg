@@ -31,9 +31,6 @@ const Navbar = () => {
 
    <Box>
     <Dropdown/>
-        <Flex className={style.menu_container_flex_box}>
-       
-        </Flex>
    </Box>
   </Box>
     

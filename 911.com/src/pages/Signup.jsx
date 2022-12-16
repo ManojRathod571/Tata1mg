@@ -10,7 +10,6 @@ import {
   Button,
   Heading,
   Text,
-  useColorModeValue,
   Link,
   useToast, 
   InputLeftAddon,
@@ -100,12 +99,12 @@ export default function SignupCard() {
 
 
   return (
-    <>
+    <Box  bg={"#fffcf8"} marginBottom={50}>
       <Flex
         minH={"100vh"}
         align={"center"}
         justify={"center"}
-        bg={useColorModeValue("gray.50", "gray.800")}
+        
       >
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
@@ -115,12 +114,13 @@ export default function SignupCard() {
           </Stack>
           <Box
             rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
+            bg={"white"}
             boxShadow={"lg"}
             p={8}
+            zIndex='0'
           >
-            <Stack spacing={4}>
-              <form onSubmit={handleSignup}>
+            <Stack spacing={4}  zIndex='1'>
+              <form onSubmit={handleSignup} >
                 <Flex
                   flexDirection={{
                     base: "column",
@@ -130,8 +130,8 @@ export default function SignupCard() {
                   }}
                   gap={5}
                 >
-                  <Box>
-                    <FormControl id="fullname" isRequired>
+                  <Box   zIndex='1'>
+                    <FormControl id="fullname" isRequired >
                       <FormLabel>Full Name</FormLabel>
                       <Input type="text" name="name" onChange={handleChange} />
                     </FormControl>
@@ -218,6 +218,6 @@ export default function SignupCard() {
           </Box>
         </Stack>
       </Flex>
-    </>
+    </Box>
   );
 }

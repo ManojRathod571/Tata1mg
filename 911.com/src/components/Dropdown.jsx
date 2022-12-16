@@ -438,9 +438,9 @@ export const Dropdown=()=>{
             <Box className={styles.dropdown_category_hoverbox_container}>
                 <Box className={styles.main_category}><NavLink><Text>Ayurveda Products</Text></NavLink></Box>
 
-                <Box className={styles.hover_box} >
+                <Box className={`${styles.hover_box} ${styles.ayurveda_box}`} >
                     <Box display='flex' gap={3}  padding='8px'>
-                        <Box className={styles.hover_sub_category_box}   border='none'>
+                        <Box className={`${styles.hover_sub_category_box} `}   border='none'>
                             <Box  className={styles.border}>
                              <NavLink className={styles.hover_box_category_heading}>Ayurveda Top Brands</NavLink>
                              <NavLink className={styles.hover_box_category_text}>Dabur</NavLink>
@@ -497,6 +497,147 @@ export const Dropdown=()=>{
                 </Box>
             </Box>
 
+
+
+
+            <Box className={styles.dropdown_category_hoverbox_container}>
+                <Box className={styles.main_category}><NavLink><Text>Homeopathy</Text></NavLink></Box>
+
+                <Box className={`${styles.hover_box} ${styles.Homeopathy_box}`} >
+                    <Box display='flex' gap={3}  padding='8px'>
+                        <Box className={styles.hover_sub_category_box}   border='none'>
+                           <Box  className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Homeopathy Top Brands</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>SBL Homoeopathy</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Dr Reckeweg</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Dr Willmar Schwabe India</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Dr Batra's</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Dr Bakshi Bakson</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Bhandari</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Boiron</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Medisynth</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Haslab</NavLink>
+                            </Box>
+
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Homeopathy Wellness Combos</NavLink>
+                            </Box>
+                        </Box>
+
+                 
+                    <Box className={styles.hover_sub_category_box_last}>
+                        <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Homeopathy Popular Categories</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Homeopathic Care for Cold & Cough</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Respiratory Wellness</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Homeopathy Covid Essentials</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Sexual Health</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Hair Care Products</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Skin Care Products</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Children's Health</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Women's Health</NavLink>
+                        </Box>
+
+                        <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Homeopathy Medicines</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Homeopathic Drops</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Dilutions</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Mother Tinctures</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Triturations</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Millesimal LM Potencies</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Biochemics</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Bach Flower Remedies</NavLink>
+                        </Box>
+                    </Box>
+                    </Box>
+                </Box>
+            </Box>
+
+
+
+            <Box className={styles.dropdown_category_hoverbox_container}>
+                <Box className={styles.main_category}><NavLink><Text>Featured</Text></NavLink></Box>
+
+                <Box className={`${styles.hover_box} ${styles.Homeopathy_box}`} >
+                    <Box display='flex' gap={3}  padding='8px'>
+                        <Box className={styles.hover_sub_category_box}   border='none'>
+                            <Box  className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Winter Care</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Multivitamins</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                            </Box>
+
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Multivitamins</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                            </Box>
+
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Multivitamins</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                            </Box>
+                        </Box>
+
+                 
+                    <Box className={styles.hover_sub_category_box}>
+                        <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Protein Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Whey Protein</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Amino Acids</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Mass Gainers</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Workout Essential</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Fat Burners</NavLink>
+                        </Box>
+
+                        <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Omega & Fish Oil</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Fish Oil</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Cod Liver Oil</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Flax Seed Oil</NavLink>
+                        </Box>
+
+                        <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Immunity Boosters</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Chyawanprasha</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Vitamin C</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Herbal Teas</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Antioxidant Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Ayurvedic Supplements</NavLink>
+                        </Box>
+                        </Box>
+
+
+                        <Box className={styles.hover_sub_category_box_last}>
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Specialty Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Plant based Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Beauty Supplements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Pre and Probiotics</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Glucosamine</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Collagen</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Antioxidants</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Biotin</NavLink>
+                            </Box>
+
+                            <Box>
+                             <NavLink className={styles.hover_box_category_heading}>Weight Management</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Weight Management Herbs</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Meal Replacements</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Weight Gain</NavLink>
+                            </Box>
+                        </Box>
+                    </Box>
+                </Box>
+            </Box>
 
         </Flex> 
     </Box>
