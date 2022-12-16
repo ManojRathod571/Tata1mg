@@ -1,10 +1,11 @@
 
+
 import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const CheckupCard = ({ something, prodVal = 5 }) => {
+const CalciumCard = ({ something, prodVal = 6 }) => {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -24,7 +25,8 @@ const CheckupCard = ({ something, prodVal = 5 }) => {
     };
 
     return (
-        <Box bg="white" p="2rem" border="solid 1px red" >
+        <Box bg="white" p="2rem" height="350px">
+            {/* new */}
             <Carousel
                 swipeable={true}
                 draggable={true}
@@ -42,9 +44,8 @@ const CheckupCard = ({ something, prodVal = 5 }) => {
             >
                 {something.map((e, i) => (
                     <Box
-                        h={"90%"}
-                        w={"80%"}
-                        border="solid 1px red"
+                        h={"70%"}
+                        border="solid red 1px"
                         p="0.5rem"
                         key={i}
                         textAlign="left"
@@ -56,25 +57,20 @@ const CheckupCard = ({ something, prodVal = 5 }) => {
                         }}
                         cursor="pointer"
                     >
+                        <Image h={"40%"} w={"70%"} m="auto" src={e.img} />
                         <Box>
-
-                            <Text fontSize={"14px"}>{e.title}
-                                <span><Image width={"10px"} src={e.safelogo} alt="logo" /></span></Text>
-                            <Image h={"30%"} w={"40%"} m="auto" src={e.img} />
-                        </Box>
-
-                        <Box>
-                            <Text fontSize={"15px"}>{e.dis1}</Text>
-                            <Text fontSize={"13px"}>{e.dis2}</Text>
-                            <Text fontSize={"14px"}>
-                                ₹{e.price}
-                                <span marginleft="10px" style={{ textDecoration: "line-through" }}>
+                            <Text fontSize={"14px"}>{e.name}</Text>
+                            <Text fontSize={"12px"}>{e.qty}</Text>
+                            <Text >
+                                <Text fontSize={"16px"}>MRP</Text>
+                                <span style={{ textDecoration: "line-through", fontSize: "16px" }}>
                                     ₹{e.strikePrice}
                                 </span>
+                                <span style={{ color: "green", marginLeft: "1rem" }}>
+                                    {e.discount}
+                                </span>
                             </Text>
-
-
-
+                            <Text fontWeight={"600"}>₹ {e.price}</Text>
                         </Box>
                     </Box>
                 ))}
@@ -83,4 +79,4 @@ const CheckupCard = ({ something, prodVal = 5 }) => {
     );
 };
 
-export default CheckupCard
+export default CalciumCard;
