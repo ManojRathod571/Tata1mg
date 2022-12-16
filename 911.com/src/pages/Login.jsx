@@ -46,7 +46,7 @@ import { Signin, Signin_failure } from "../store/Authreducer/action";
       if(!isAuth){
         dispatch(Signin(userData)).then((res)=>{
             console.log(res.m)
-            if(res.msg.login){
+            if(res){
               toast({
                 title: "Signin Successfull",
                 status: 'success',
@@ -118,6 +118,7 @@ import { Signin, Signin_failure } from "../store/Authreducer/action";
                         type={showPassword ? "text" : "password"}
                         name="password"
                         onChange={handleChange}
+                        
                       />
                       <InputRightElement h={"full"}>
                         <Button

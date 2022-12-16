@@ -12,7 +12,9 @@ import {
   Text,
   useColorModeValue,
   Link,
-  useToast 
+  useToast, 
+  InputLeftAddon,
+  Select
 } from "@chakra-ui/react";
 
 import { useState } from "react";
@@ -26,62 +28,72 @@ export default function SignupCard() {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
   const [userData, setUserData] = useState({});
+  const [isInvalid, setisInvalid] = useState(false);
   
   const toast = useToast()
   const {isLoading}=useSelector((store)=>store.Authreducer)
   //console.log(isLoading)
 
   const handleChange = (e) => {
-    const { name, value, files, type } = e.target;
-    if (type === "file") {
-      setUserData({
-        ...userData,
-        [name]: files[0],
-      });
-    } else {
+    const { name, value } = e.target;
+  
       setUserData({
         ...userData,
         [name]: value,
       });
-    }
+ 
   };
 
   const handleSignup = (e) => {
     e.preventDefault();
-   // console.log(userData,"userdata");
-    dispatch(Signup(userData)).then((res)=>{
-     // console.log(res.msg.signup,res.msg.userExist,"signup")
-      if(res.msg.signup){
-        toast({
-          title: "Signup Successfull",
-          description: "We've created your account for you.",
-          status: 'success',
-          position: 'top',
-          duration: 5000,
-          isClosable: true,
-        })
-      }
-      else if(res.msg.userExist){
-        toast({
-          title: "Signup Failed",
-          description: "Email already exist",
-          status: 'error',
-          position: 'top',
-          duration: 5000,
-          isClosable: true,
-        })
-      }
-      else{
-        toast({
-          title: "Signup Failed",
-          description: "Something went wrong ",
-          status: 'error',
-          position: 'top',
-          duration: 5000,
-          isClosable: true,
-        })
-      }
+   console.log(userData,"userdata");
+   if(userData.phonenumber.length<10){
+     setisInvalid(true)
+     toast({
+      title: "Invalid Phone Number",
+      description: "Phone Number can't be less than 10-digit",
+      status: 'error',
+      position: 'top',
+      duration: 5000,
+      isClosable: true,
     })
+   }
+   else{
+    dispatch(Signup(userData)).then((res)=>{
+      // console.log(res.msg.signup,res.msg.userExist,"signup")
+       if(res==='Sign up successfully'){
+         toast({
+           title: "Signup Successfull",
+           description: "We've created your account for you.",
+           status: 'success',
+           position: 'top',
+           duration: 5000,
+           isClosable: true,
+         })
+       }
+       else if(res==='User already exits, Please try login'){
+         toast({
+           title: "Signup Failed",
+           description: "Email already exist,try login",
+           status: 'error',
+           position: 'top',
+           duration: 5000,
+           isClosable: true,
+         })
+       }
+       else{
+         toast({
+           title: "Signup Failed",
+           description: "Something went wrong ",
+           status: 'error',
+           position: 'top',
+           duration: 5000,
+           isClosable: true,
+         })
+       }
+     })
+   }
+    
   }
     
 
@@ -125,16 +137,32 @@ export default function SignupCard() {
                     </FormControl>
                   </Box>
                   <Box>
-                    <FormControl id="age" isRequired>
-                      <FormLabel>Age</FormLabel>
+                    <FormControl id="pincode" isRequired>
+                      <FormLabel>Pin Code</FormLabel>
                       <Input
-                        type="text"
-                        name="profile_pic"
+                        type="number"
+                        name="pincode"
                         onChange={handleChange}
+                        
                       />
                     </FormControl>
                   </Box>
                 </Flex>
+                <FormControl id="gender" isRequired>
+                  <FormLabel>Gender</FormLabel>
+                  <Select name="gender" type='text' onChange={handleChange}>
+                    <option value="Male">Male</option>
+                    <option value="Feamle">Feamle</option>
+                    <option value="Other">Other</option>
+                  </Select>
+                </FormControl>
+                <FormControl id="phonenumber" isRequired>
+                  <FormLabel>Phone Number</FormLabel>
+                  <InputGroup>
+                    <InputLeftAddon children='+91' />
+                    <Input isInvalid={isInvalid} type='number' name="phonenumber" onChange={handleChange} />
+                </InputGroup>
+                </FormControl>
                 <FormControl id="email" isRequired>
                   <FormLabel>Email address</FormLabel>
                   <Input type="email" name="email" onChange={handleChange} />
@@ -146,6 +174,7 @@ export default function SignupCard() {
                       type={showPassword ? "text" : "password"}
                       name="password"
                       onChange={handleChange}
+                      
                     />
                     <InputRightElement h={"full"}>
                       <Button
