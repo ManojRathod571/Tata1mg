@@ -10,11 +10,11 @@ import { Box, Flex, HStack, Menu, MenuButton, MenuItem, MenuList, Text, useDiscl
 export const Dropdown=()=>{
     const { isOpen, onOpen, onClose } = useDisclosure()
     return <Box className={styles.dropdown_container}>
-        <Flex gap={4}>
+        <Flex gap={3} flexWrap="wrap" padding={0} justifyContent='center'>
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink >Health Resource Center</NavLink></Box>
+                <Box className={styles.main_category}><NavLink >Health Resource Center{" "}<ChevronDownIcon boxSize={4}/></NavLink></Box>
 
-                <Box className={styles.hover_box}>
+                <Box className={styles.hover_box} padding={4}>
                     <NavLink className={styles.hover_box_category_heading}>All Medicines</NavLink>
                     <NavLink className={styles.hover_box_category_heading}>All Diseases</NavLink>
                     <NavLink className={styles.hover_box_category_heading}>Medicines by Therapeutic Class</NavLink>
@@ -23,7 +23,7 @@ export const Dropdown=()=>{
             </Box>
 
            <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Vitamins & Nutrition</Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink><Text>Vitamins & Nutrition{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={styles.hover_box} >
                     <Box display='flex' gap={3}  padding='8px'>
@@ -108,7 +108,7 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Diabetes</Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink><Text>Diabetes{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={styles.hover_box} >
                     <Box display='flex' gap={3}  padding='8px'>
@@ -154,7 +154,7 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Healthcare Devices</Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink><Text>Healthcare Devices{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={styles.hover_box} >
                     <Box display='flex' gap={3}  padding='8px'>
@@ -258,7 +258,7 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Personal Care</Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink><Text>Personal Care{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={styles.hover_box} >
                     <Box display='flex' gap={3}  padding='8px'>
@@ -353,7 +353,7 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Health Conditions</Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink><Text>Health Conditions{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={`${styles.hover_box} ${styles.hover_box_breakpoint}`} >
                     <Box display='flex' gap={3}  padding='8px'>
@@ -436,7 +436,7 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Ayurveda Products</Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink><Text>Ayurveda Products{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={`${styles.hover_box} ${styles.ayurveda_box}`} >
                     <Box display='flex' gap={3}  padding='8px'>
@@ -501,7 +501,7 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Homeopathy</Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink><Text>Homeopathy{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={`${styles.hover_box} ${styles.Homeopathy_box}`} >
                     <Box display='flex' gap={3}  padding='8px'>
@@ -557,88 +557,105 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Featured</Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink><Text>Featured{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={`${styles.hover_box} ${styles.Homeopathy_box}`} >
                     <Box display='flex' gap={3}  padding='8px'>
                         <Box className={styles.hover_sub_category_box}   border='none'>
                             <Box  className={styles.border}>
                              <NavLink className={styles.hover_box_category_heading}>Winter Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Multivitamins</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Body & Skin Care</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Hair & Scalp Care</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Cough & Cold</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Fever & Headache</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Vaporizers & Nebulizers</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Heating Aid</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Winter Combos</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Multivitamins</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                             <NavLink className={styles.hover_box_category_heading}>TATA 1mg Health Products</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Multivitamins</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                             <NavLink className={styles.hover_box_category_heading}>Trending now</NavLink>
+                            </Box>
+
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Trending now</NavLink>
+                            </Box>
+
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Buy More, Save More</NavLink>
                             </Box>
                         </Box>
 
                  
                     <Box className={styles.hover_sub_category_box}>
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Protein Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Whey Protein</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Amino Acids</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mass Gainers</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Workout Essential</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Fat Burners</NavLink>
+                             <NavLink className={styles.hover_box_category_heading}>Minimum 33% Off</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Omega & Fish Oil</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Fish Oil</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Cod Liver Oil</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Flax Seed Oil</NavLink>
+                             <NavLink className={styles.hover_box_category_heading}>Popular Combo Deals</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Immunity Boosters</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Chyawanprasha</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamin C</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Herbal Teas</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Antioxidant Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Ayurvedic Supplements</NavLink>
-                        </Box>
+                             <NavLink className={styles.hover_box_category_heading}>Deals of the Day</NavLink>
                         </Box>
 
+                        <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Top Brands</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Accu-Chek</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Ensure</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Revital</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Scalpe</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Teddy</NavLink>
+                             <NavLink className={styles.hover_box_category_text}>Pediasure</NavLink>
+                        </Box>
 
-                        <Box className={styles.hover_sub_category_box_last}>
-                            <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Specialty Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Plant based Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Beauty Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Pre and Probiotics</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Glucosamine</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Collagen</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Antioxidants</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Biotin</NavLink>
-                            </Box>
+                      
 
-                            <Box>
-                             <NavLink className={styles.hover_box_category_heading}>Weight Management</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Weight Management Herbs</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Meal Replacements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Weight Gain</NavLink>
-                            </Box>
+                        <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Super savings</NavLink>
+                        </Box>
                         </Box>
                     </Box>
                 </Box>
             </Box>
 
+
+
+
+            <Box className={styles.dropdown_category_hoverbox_container}>
+                <Box className={styles.main_category}><NavLink><Text>Covid Essentials{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
+
+                <Box className={styles.hover_box} >
+                    <Box display='flex' gap={3}  padding='8px'>
+                        <Box className={styles.hover_sub_category_box}   border='none'>
+                            <Box  className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Covid-19 Self test kits</NavLink>
+                            </Box>
+
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Oxygen Cans & Concentrators</NavLink>
+                            </Box>
+
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Masks</NavLink>
+                            </Box>
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Sanitizers & Handwash Products</NavLink>
+                            </Box>
+                            <Box className={styles.border}>
+                             <NavLink className={styles.hover_box_category_heading}>Support Your Immunity</NavLink>
+                            </Box>
+                        </Box>
+
+                 
+                    </Box>
+                </Box>
+            </Box>
         </Flex> 
     </Box>
 }
