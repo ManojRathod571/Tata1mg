@@ -1,12 +1,13 @@
 const express = require("express");
-const app = express.Router();
+const cartRoute = express.Router();
 const jwt = require("jsonwebtoken");
 const User = require("../auth/auth.model");
 const Cart = require("./cart.model");
-const Product = require("../product/product.model");
+const product = require("../products/product.model");
 
 const authMiddleWare = async (req, res, next) => {
   const token = req.headers.token;
+  // console.log("Token", token);
   try {
     if (!token) {
       return res.send("Token missing");
@@ -29,9 +30,9 @@ const authMiddleWare = async (req, res, next) => {
   }
 };
 
-app.use(authMiddleWare);
+cartRoute.use(authMiddleWare);
 
-app.get("", async (req, res) => {
+cartRoute.get("", async (req, res) => {
   try {
     let carts = await Cart.find({ user: req.userId }).populate([
       {
@@ -46,7 +47,7 @@ app.get("", async (req, res) => {
   }
 });
 
-app.post("", async (req, res) => {
+cartRoute.post("", async (req, res) => {
   try {
     let dbProduct = await Product.findOne({ _id: req.body.product });
     let cartItem = await Cart.findOne({ product: req.body.product });
@@ -91,10 +92,12 @@ app.post("", async (req, res) => {
       }
     } else {
       if (Check(dbProduct, req.body.quantity)) {
+        console.log("True run");
         return res.send(
           `Database have only ${dbProduct.quantity} of this item`
         );
       } else {
+        console.log("False run");
         let cartItem = await Cart.create({
           ...req.body,
           user: req.userId,
@@ -112,6 +115,7 @@ app.post("", async (req, res) => {
 });
 
 function Check(dbProduct, qty) {
+  // console.log("Quantity", qty);
   if (dbProduct.quantity < qty) {
     return true;
   } else {
@@ -119,4 +123,19 @@ function Check(dbProduct, qty) {
   }
 }
 
-module.exports = app;
+cartRoute.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  console.log("Id:", id);
+  try {
+    let cartItem = await Cart.findById({ _id: id });
+    // await Product.findByIdAndDelete({ _id: cartItem.product });
+    await Product.findByIdAndUpdate(
+      { _id: cartItem.product },
+      { $inc: { quantity: cartItem.quantity } }
+    );
+    res.send("Item deleted Successfully");
+  } catch (error) {
+    res.send({ err: "Something went wrong" });
+  }
+});
+module.exports = cartRoute;

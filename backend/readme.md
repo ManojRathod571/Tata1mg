@@ -1,6 +1,38 @@
+# cart API
+
+<!-- add to cart -->
+
+# cart api need headers and body.
+
+headers-
+1: key: token
+2: value: example(abcd@1234)
+
+body-
+1: product:example(639809a489776d408d4e233e)
+2: quantity: 1.
+
+# initially quantity will be one only. quantity should not be more than 3 if it is more than 3 then product will be out of stock.
+
+# we can increment and decrement the product quantity.
+
+url = axios.post(`${process.env.REACT_APP_URL}/cart`, body);
+
+<!-- delete from cart -->
+
+# Delete product from cart
+
+# pass token in headers and id will product id that user want to delete from cart
+
+url = axios.post(`${process.env.REACT_APP_URL}/cart/:id`);
+
 # To Start server use below command
 
 - npm start
+
+# Base URL
+
+-http://localhost:8000
 
 # for login and signup
 
