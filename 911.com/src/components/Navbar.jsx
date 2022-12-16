@@ -4,9 +4,10 @@ import { Box, Flex, HStack, Image, Input, Menu, MenuButton, MenuItem, MenuList, 
 import {BsCart3} from 'react-icons/bs';
 import {IoIosSearch} from 'react-icons/io';
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link as BrowseLink, NavLink} from 'react-router-dom';
 import logo from '../assets/logo.png'
 import style from '../styles/Navbar.module.css'
+import { Dropdown } from './Dropdown';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -27,6 +28,13 @@ const Navbar = () => {
            <Box><Text>NeedHelp</Text></Box>
        </Flex>
     </Box>
+
+   <Box>
+    <Dropdown/>
+        <Flex className={style.menu_container_flex_box}>
+       
+        </Flex>
+   </Box>
   </Box>
     
       
