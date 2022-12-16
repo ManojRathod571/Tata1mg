@@ -57,5 +57,14 @@ productRoute.get("/", async (req, res) => {
       name: { $regex: "^" + temp, $options: "i" },
     }).limit();
     res.send(product);
+  } else {
+    let AllProduct = await Product.find();
+    res.send(AllProduct);
   }
+});
+
+productRoute.post("/:id", (req, res) => {
+  const { id } = req.params;
+  try {
+  } catch (error) {}
 });

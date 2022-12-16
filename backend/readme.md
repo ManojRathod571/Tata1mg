@@ -2,6 +2,10 @@
 
 - npm start
 
+# Base URL
+
+-http://localhost:8000
+
 # for login and signup
 
 - Signup
