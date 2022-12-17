@@ -45,8 +45,7 @@ import { Signin, Signin_failure } from "../store/Authreducer/action";
       e.preventDefault();
       if(!isAuth){
         dispatch(Signin(userData)).then((res)=>{
-            console.log(res.m)
-            if(res.msg.login){
+            if(res){
               toast({
                 title: "Signin Successfull",
                 status: 'success',
@@ -91,7 +90,8 @@ import { Signin, Signin_failure } from "../store/Authreducer/action";
           minH={"100vh"}
           align={"center"}
           justify={"center"}
-          bg={useColorModeValue("gray.50", "gray.800")}
+          bg={"#fffcf8"}
+          marginTop={-8}
         >
           <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
             <Stack align={"center"}>
@@ -118,6 +118,7 @@ import { Signin, Signin_failure } from "../store/Authreducer/action";
                         type={showPassword ? "text" : "password"}
                         name="password"
                         onChange={handleChange}
+                        
                       />
                       <InputRightElement h={"full"}>
                         <Button

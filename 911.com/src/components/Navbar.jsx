@@ -1,28 +1,28 @@
-import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
-import { Box, Flex, HStack, Image, Input, Menu, MenuButton, MenuItem, MenuList, Spacer, Text, useDisclosure, VStack } from '@chakra-ui/react';
-
+import { Box, Flex,  Image, Input, Text, } from '@chakra-ui/react';
 import {BsCart3} from 'react-icons/bs';
 import {IoIosSearch} from 'react-icons/io';
 import React from 'react'
 import { Link as BrowseLink, NavLink} from 'react-router-dom';
 import logo from '../assets/logo.png'
 import style from '../styles/Navbar.module.css'
+import {SlUser} from 'react-icons/sl'
 import { Dropdown } from './Dropdown';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const {isAuth}=useSelector((store)=>store.Authreducer)
   return (
   <Box className={style.nav}>
      <Box width='98%' margin='auto' >{/*  main   */}
        <Flex  alignItems='center' gap='9'>
-           <Box border='1px solid black'><Image src={logo} alt='911.com'/></Box>
+           <Box ><Image src={logo} alt='911.com'/></Box>
            <Flex width='52%' border='1px solid black' gap={2}>
               <Box><Input placeholder='Enter Your city'/></Box>
               <Box width='65%' display='flex' alignItems='center'><Input placeholder='Enter Your city'/><IoIosSearch size='21px'/></Box>
            </Flex>
 
 
-           <Box><Text>Login / Signup</Text></Box>
+           <Box>{isAuth?<SlUser/>:<NavLink to={'/signup'}>Login / Signup</NavLink>}</Box>
            <Box><Text>Offers</Text></Box>
            <Box><BsCart3 size='21px'/></Box>
            <Box><Text>NeedHelp</Text></Box>
@@ -31,9 +31,6 @@ const Navbar = () => {
 
    <Box>
     <Dropdown/>
-        <Flex className={style.menu_container_flex_box}>
-       
-        </Flex>
    </Box>
   </Box>
     

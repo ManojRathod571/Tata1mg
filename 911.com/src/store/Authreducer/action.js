@@ -6,16 +6,10 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS, SIGNUP_FAI
 export const Signup=(payload)=>(dispatch)=>{
    console.log(payload);
     dispatch(Signup_request())
-let token=getData('token')||'abc'
-        return  axios.post(`${url}/signup`, payload, {
-            headers: {
-                "Content-Type": "multipart/form-data",
-                authorization: `Bearer ${token}`
-            },
-        }).then((res)=>{
-          console.log(res.data.msg)
+        return  axios.post(`${url}/user/signup`, payload).then((res)=>{
+          console.log(res.data)
             dispatch({ type: SIGNUP_SUCCESS });
-            return {msg:res.data}
+            return (res.data.msg)
         }).catch((err)=>{
             dispatch(Signup_failure())
         })
@@ -38,10 +32,11 @@ export const Signin=(payload)=>(dispatch)=>{
     //console.log(payload);
      dispatch(Signin_request())
  
-         return  axios.post(`${url}/login`, payload).then((res)=>{
-          // console.log(res.data,'pot')
+         return  axios.post(`${url}/user/login`, payload).then((res)=>{
+          console.log(res,'pot')
              dispatch({ type: LOGIN_SUCCESS,payload:res.data});
-             return {msg:res.data}
+
+             return (res.data.login)
          }).catch((err)=>{
              dispatch(Signin_failure())
          })
