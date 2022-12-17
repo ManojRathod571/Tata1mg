@@ -7,13 +7,15 @@ module.exports = userRoute = express.Router();
 
 userRoute.post("/signup", async (req, res) => {
   const { email, password, name, phonenumber, address, pincode, gender } = req.body;
-
+console.log(req.body);
   try {
-    const user = await userModel.findOne({ email });
-    if (user) {
+   const user = await userModel.find({ email });
+
+    if (user.length>0) {
       res.send({"msg":"User already exits, Please try login"});
     } else {
       bcrypt.hash(password, 6, async (err, hashedPassword) => {
+  
         await userModel.create({
           email,
           password: hashedPassword,
@@ -22,6 +24,7 @@ userRoute.post("/signup", async (req, res) => {
           address,
           pincode,
           gender,
+          role:"user"
         });
         res.status(200).send({"msg":"Sign up successfully"});
       });
@@ -64,6 +67,17 @@ userRoute.post("/login", async (req, res) => {
       console.log(error)
   }
  
+
+
+  // email:'admin911@gmail.com',
+  // password: hashedPassword='admin911@.com',
+  // name:"Admin",
+  // phonenumber:"6204591216",
+  // address:'',
+  // pincode:853204,
+  // gender:"Male",
+  // role:'admin'
+
   // const { email, password } = req.body;
   // try {
   //   let user = await userModel.findOne({ email });
