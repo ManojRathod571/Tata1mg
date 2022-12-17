@@ -5,20 +5,20 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import style from "./DashNav.module.css";
 import logo from "../assets/logo.png"
 import { useDispatch, useSelector } from "react-redux";
-// import { Logout } from "../store/Auth/auth.action";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import {logout} from "../store/Authreducer/action"
 
 const DashboardNav = ({ onOpen }) => {
   // const user = useSelector((store) => store.auth.user.email);
   //console.log(user);
+  const {isAdmin}=useSelector((store)=>store.Authreducer)
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const LOGOUT = () => {
-    // if (user === "") {
-    //   dispatch(Logout);
-    // }
-    navigate("/");
+   dispatch(logout())
+    
+    navigate("/login");
   };
 
   return (
@@ -44,9 +44,9 @@ const DashboardNav = ({ onOpen }) => {
         <div className={style.vertical_dotted_line}></div>
         <IoNotificationsOutline size={21} />
         <div className={style.vertical_dotted_line}></div>
-        <div className={style.user} onClick={LOGOUT}>
+       {!isAdmin?<NavLink to={'/login'}>Login</NavLink>:<><div className={style.user} onClick={LOGOUT}>
           LogOut
-        </div>
+        </div></>}
       </div>
     </nav>
   );

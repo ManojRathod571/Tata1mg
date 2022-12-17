@@ -68,7 +68,37 @@ productRoute.get("/allproduct",adminValidation, async(req, res) => {
       
   try {
     
+    let AllProduct=await Product.find().limit(100)
+    res.send(AllProduct);
+  } catch (error) {}
+});
+
+productRoute.post("/allproduct",adminValidation, async(req, res) => {
+      
+  try {
+    
     let AllProduct=await Product.find()
     res.send(AllProduct);
   } catch (error) {}
 });
+
+productRoute.patch("/allproduct",adminValidation, async(req, res) => {
+      
+  try {
+    
+    let AllProduct=await Product.find()
+    res.send(AllProduct);
+  } catch (error) {}
+});
+
+
+productRoute.delete("/allproduct/:id",adminValidation, async(req, res) => {
+      
+  try {
+    
+    let AllProduct=await Product.find()
+    res.send(AllProduct);
+  } catch (error) {}
+});
+
+

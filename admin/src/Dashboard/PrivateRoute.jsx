@@ -8,6 +8,7 @@ const PrivateRoute = ({children}) => {
         return <Navigate to={'/login'}/>
     }
   return children
+   
 }
 
 export default PrivateRoute

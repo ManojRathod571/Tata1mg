@@ -5,6 +5,7 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS } from "./a
 const initialState={
     isLoading:false,
     isError:false,
+    
     isAdmin:getData("isAdmin")||false,
     admin:getData("admin")||{}
 }

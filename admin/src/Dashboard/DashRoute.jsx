@@ -7,6 +7,9 @@ import DashboardNav from './DashboardNav'
 import Reports from './Reports'
 import SideBar from './Sidebar'
 import Login from './Login'
+import Home from './Home'
+import PrivateRoute from './PrivateRoute'
+import Product from '../page/Product'
 
 
 export const DashRoute = () => {
@@ -22,14 +25,14 @@ export const DashRoute = () => {
 
   } 
   return (
-    <> <DashboardNav onOpen={toggle} />
+    <> 
     <div> 
-       <div>
-        <SideBar isOpen={isOpen}/>
-        </div>
+      
         <div  style={{width:'100%', marginTop:'50px',height:'100vh'}}>
         <Routes>
+          <Route path={'/'} element={<PrivateRoute><Home/></PrivateRoute>}/>
           <Route path={'/login'} element={<Login/>}/>
+          <Route path={'/products'}  element={<Product/>}/>
             <Route path={'/dashboard'} element={<Dashboard/>}/>
             <Route path={'/reports'} element={<Reports/>}/>
         </Routes>
