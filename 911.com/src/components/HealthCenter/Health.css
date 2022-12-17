@@ -22,7 +22,7 @@
 }
 
 .Data {
-    border: solid 1px green;
+    /* border: solid 1px green; */
     background-color: white;
     padding: 2%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
