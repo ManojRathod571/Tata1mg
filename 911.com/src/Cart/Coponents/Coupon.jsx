@@ -15,12 +15,12 @@ function Coupon() {
     <div>
         <Box>
      {/* Coupon section */}
-     <Box mt="16px">
+     <Box mt="16px" shadow="0 1px 2px 0 rgb(0 0 0 / 20%)" borderRadius="2px" >
             <Box
               w="449px"
               bg="#fff"
               textAlign="left"
-              shadow="md"
+             
               borderRadius="2px"
             >
               <Box
@@ -106,13 +106,11 @@ function Coupon() {
      
 {/* Check health section */}
 
-<Box mt="16px">
+<Box mt="16px" shadow="0 1px 2px 0 rgb(0 0 0 / 20%)" borderRadius="2px">
   <Box
     w="449px"
     bg="#fff"
     textAlign="left"
-    shadow="md"
-    borderRadius="2px"
   >
     <Box
       display="flex"
@@ -162,7 +160,7 @@ function Coupon() {
 
 {/* Neuo coins */}
 
-<Box mt="16px">
+<Box mt="16px" borderRadius="2px">
   <Box
     w="449px"
     bg="#fff"
