@@ -18,6 +18,7 @@ import axios from "axios";
 function Item() {
   const [quantity, setQuantity] = useState(1);
   const [data,setData] = useState([]);
+ let totalPrice = 0
 
  
 
@@ -31,9 +32,9 @@ useEffect(()=>{
 
   const getData=()=>{
     return axios.get("https://tan-real-buffalo.cyclic.app/smartphones").then((res)=>{
-       let result = res.data
-        setData(result)
-      //   setError(false)
+       
+        setData(res.data)
+      
       })
       
   }
@@ -41,13 +42,13 @@ useEffect(()=>{
 const removeOperation = (id)=>{
     return (
         axios.delete(`https://tan-real-buffalo.cyclic.app/smartphones/${id}`).then((res)=>{
-       
+            setData(res.data)
         //   setError(false)
-        
+        getData()
         })
        
     )
-    getData()
+    
    
 }
 
@@ -64,6 +65,7 @@ const removeOperation = (id)=>{
       </Text>
 
       {data && data.map((item)=>(
+
         <Box
         w="600px"
         bg="#fff"
@@ -123,11 +125,11 @@ const removeOperation = (id)=>{
               </Text>
             </Box>
             <Box display="flex" alignItems="center">
-              <Image
+             <button disabled={quantity==1}><Image
                 src="https://www.1mg.com/images/minus-cart.svg"
                 cursor="pointer" disable={quantity==1}
                 onClick={() => setQuantity(quantity - 1)}
-              />
+              /></button> 
               <Text color="#212121" fontSize="14px" mx="4px">
                 {quantity}
               </Text>
