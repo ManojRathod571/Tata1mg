@@ -1,9 +1,8 @@
 import { Box, Button, Image, Link, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
-import BrandsCard from "../cards/BrandCard";
-
-import ProductsCard from "../cards/ProductsCard";
-import { Shopbyhealthconcerns, topSellingProducts } from "../Data/products.data";
+import BrandsCard from "../components/HealthBrandCard";
+import { Shopbyhealthconcerns, topSellingProducts } from "../components/HealthData";
+import ProductsCard from "../components/HealthProductCard";
 
 
 export const HealthPage = () =>{
