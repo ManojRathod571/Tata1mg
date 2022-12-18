@@ -2,22 +2,12 @@ import React from "react";
 import {
   Box,
   Flex,
-  Button,
-  Heading,
-  ButtonGroup,
-  HStack,
   Image,
   Input,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   Spacer,
   Text,
-  useDisclosure,
-  VStack,
 } from "@chakra-ui/react";
-import logo from "../assets/logo.png";
+import logo from '../assets/logo.png'
 import { IoIosSearch } from "react-icons/io";
 
 function CartNavBar() {
