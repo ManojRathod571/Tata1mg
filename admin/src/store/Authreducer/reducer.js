@@ -17,13 +17,13 @@ export const reducer=(state=initialState,{type,payload})=>{
         saveData("isAdmin", true);
       saveData("admintoken", payload.token);
       //console.log(payload.admin);
-      saveData("admin", JSON.stringify(payload.admin));
+      saveData("admin", JSON.stringify(payload.user));
         return{
             ...state,
             isLoading:false,
             isError:false,
             isAdmin:true,
-            admin:payload.admin
+            admin:payload.user
         }
     }
     case(LOGIN_REQUEST):{

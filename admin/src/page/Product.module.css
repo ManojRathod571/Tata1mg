@@ -33,6 +33,7 @@
     display: none;
     left: 30%;
     align-items: center;
+    z-index: 100;
     /* pointer-events: none; */
     justify-content: center;
     background-color: white;
@@ -45,6 +46,7 @@
     top: 2;
     display: flex;
     left: 30%;
+    z-index: 100;
     align-items: center;
     /* pointer-events: none; */
     justify-content: center;
@@ -86,7 +88,9 @@ border-radius: 0.2rem;
 }
 .universal>div{
     width: 22%;
-    border: 1px solid black;
+    /* border: 1px solid rgb(230, 7, 7); */
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .universal>div>div>img{
     width: 100%;

@@ -2,15 +2,12 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Route, Routes } from 'react-router-dom'
 import { close, open } from '../store/isOpen/isOpen.action'
-import Dashboard from './Dashboard'
-import DashboardNav from './DashboardNav'
 import Reports from './Reports'
-import SideBar from './Sidebar'
 import Login from './Login'
 import Home from './Home'
 import PrivateRoute from './PrivateRoute'
 import Product from '../page/Product'
-
+import Users from '../page/Users'
 
 export const DashRoute = () => {
   const dispatch=useDispatch()
@@ -20,8 +17,7 @@ export const DashRoute = () => {
     setIsOpen(!isOpen);
     dispatch(isOpen?close():open())
 
-    
-   // console.log(isOpen?"osdpifgiopjgvihd":"tueroiioertyiort")
+  
 
   } 
   return (
@@ -32,9 +28,9 @@ export const DashRoute = () => {
         <Routes>
           <Route path={'/'} element={<PrivateRoute><Home/></PrivateRoute>}/>
           <Route path={'/login'} element={<Login/>}/>
-          <Route path={'/products'}  element={<Product/>}/>
-            <Route path={'/dashboard'} element={<Dashboard/>}/>
-            <Route path={'/reports'} element={<Reports/>}/>
+          <Route path={'/products'}  element={<PrivateRoute><Product/></PrivateRoute>}/>
+          <Route path={'/users'}  element={<PrivateRoute><Users/></PrivateRoute>}/>
+          <Route path={'/reports'} element={<PrivateRoute><Reports/></PrivateRoute>}/>
         </Routes>
         </div>
       

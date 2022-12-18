@@ -3,7 +3,7 @@ const cartRoute = express.Router();
 const jwt = require("jsonwebtoken");
 const User = require("../auth/auth.model");
 const Cart = require("./cart.model");
-const product = require("../products/product.model");
+const {Product} = require("../products/product.model");
 
 const authMiddleWare = async (req, res, next) => {
   const token = req.headers.token;

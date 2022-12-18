@@ -1,10 +1,11 @@
-.singleCard{
-    position: relative;
-}
+/* .singleCard{
+    width: 22%;
+    border: 1px solid rgb(230, 7, 7);
+} */
 
 .info_box{
     padding: 10px;
-   
+    /* position: relative; */
 }
 .info_box>div{
 margin-top: 10px;
@@ -44,11 +45,12 @@ z-index: 100;
 }
 .update_box{
     display: flex;
+  
     justify-content: space-between;
    
 }
 .add_product_cont{
-    position: relative;
+    /* position: relative; */
    
     background-color: white;
 }
@@ -66,7 +68,7 @@ z-index: 100;
 .addform{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     width:25em;
-  
+    z-index: 100;
     position: absolute;
     padding: 12px;
     bottom: 30%;
@@ -77,6 +79,25 @@ z-index: 100;
     justify-content: center;
     background-color: white;
 }
+.update_box>button:first-child{
+  color: white;
+    background-color: #ff6f61;
+    border: none;
+}
+.update_box>button{
+    padding: 5px;
+    color: white;
+    background-color: #ff6f61;
+    border: none;
+    cursor: pointer;
+}
+.category{
+    margin-top: 10px;
+    font-family: Open Sans,sans-serif;
+    font-size: 16px;
+    color: #4f585e;
+    font-weight: 500;
+}
 .addformopen{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     width:25em;
@@ -85,6 +106,7 @@ z-index: 100;
     top: 15%;
     display: flex;
     left: 30%;
+    z-index: 100;
     align-items: center;
     /* pointer-events: none; */
     justify-content: center;
