@@ -12,10 +12,10 @@ function App() {
       {/* <Navbar/> */}
       {/* <AllRoutes/> */}
       {/* <HealthPage/> */}
-      {/* <AyurvedaPage/> */}
+      <AyurvedaPage/>
 
 
-<PersonalCarePage/>
+{/* <PersonalCarePage/> */}
       {/* <Footer/> */}
     </div>
   );

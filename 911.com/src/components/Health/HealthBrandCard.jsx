@@ -1,8 +1,6 @@
 
 import { Box, Image, Text, Link } from "@chakra-ui/react";
 import React from "react";
-// import { Box } from "@chakra-ui/react";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -31,7 +29,7 @@ const BrandsCard = ({ something }) => {
                 swipeable={true}
                 draggable={true}
                 responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
+                ssr={true} 
                 infinite={true}
                 autoPlaySpeed={1000}
                 keyBoardControl={true}
@@ -56,7 +54,7 @@ const BrandsCard = ({ something }) => {
                         }}
                         cursor="pointer"
                     >
-                        <Link href="http://localhost:3000/products" target="_blank" textDecoration="none" textColor="gray">
+                        <Link href={e.link} target="_blank" textDecoration="none" textColor="gray">
                             <Image w={"70%"} m="auto" src={e.img} />
                             <Text fontSize={"17px"}>{e.title}</Text>
                         </Link>
