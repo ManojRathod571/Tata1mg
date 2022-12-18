@@ -18,6 +18,24 @@ body-
 
 url = axios.post(`${process.env.REACT_APP_URL}/cart`, body);
 
+<!-- To increment and decrement quantity of product -->
+
+# increment
+
+{
+"product":"639809a489776d408d4e232a",
+"quantity":"1",
+"type":"inc"
+}
+
+# decrement
+
+{
+"product":"639809a489776d408d4e232a",
+"quantity":"1",
+"type":"dec"
+}
+
 <!-- delete from cart -->
 
 # Delete product from cart
