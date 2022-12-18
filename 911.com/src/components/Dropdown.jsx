@@ -20,75 +20,75 @@ export const Dropdown=()=>{
             </Box>
 
            <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Vitamins & Nutrition{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink to={'/vitaminsproducts'} state={'immunity'}><Text>Vitamins & Nutrition{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={styles.hover_box} >
                     <Box display='flex' gap={3}  padding='8px'>
                         <Box className={styles.hover_sub_category_box}   border='none'>
                             <Box  className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Multivitamins</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Multivitamins</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Multivitamins</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Multivitamins</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Multivitamins</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_heading}>Vitamins & Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Multivitamins</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Vitamins A-Z</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Mineral Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Vitamin B12 & B Complex</NavLink>
                             </Box>
                         </Box>
 
                  
                     <Box className={styles.hover_sub_category_box}>
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Protein Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Whey Protein</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Amino Acids</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mass Gainers</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Workout Essential</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Fat Burners</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_heading}>Protein Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Whey Protein</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Amino Acids</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Mass Gainers</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Workout Essential</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Fat Burners</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Omega & Fish Oil</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Fish Oil</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Cod Liver Oil</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Flax Seed Oil</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_heading}>Omega & Fish Oil</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Fish Oil</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Cod Liver Oil</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Flax Seed Oil</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Immunity Boosters</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Chyawanprasha</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamin C</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Herbal Teas</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Antioxidant Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Ayurvedic Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_heading}>Immunity Boosters</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Chyawanprasha</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Vitamin C</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Herbal Teas</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Antioxidant Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Ayurvedic Supplements</NavLink>
                         </Box>
                         </Box>
 
 
                         <Box className={styles.hover_sub_category_box_last}>
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Specialty Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Plant based Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Beauty Supplements</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Pre and Probiotics</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Glucosamine</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Collagen</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Antioxidants</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Biotin</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_heading}>Specialty Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Plant based Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Beauty Supplements</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Pre and Probiotics</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Glucosamine</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Collagen</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Antioxidants</NavLink>
+                             <NavLink to={'/vitaminsproducts'} state={'immunity'} className={styles.hover_box_category_text}>Biotin</NavLink>
                             </Box>
 
                             <Box>
@@ -105,43 +105,43 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Diabetes{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink to={'/diabetesproduct'} state={'diabetes'}><Text>Diabetes{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={styles.hover_box} >
                     <Box display='flex' gap={3}  padding='8px'>
                         <Box className={styles.hover_sub_category_box}   border='none'>
                             <Box  className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Diabetes Monitoring</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Blood Glucose Monitors</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Test Strips & Lancets</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Syringes & Pens</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_heading}>Diabetes Monitoring</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_text}>Blood Glucose Monitors</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_text}>Test Strips & Lancets</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_text}>Syringes & Pens</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Sugar Free</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_heading}>Sugar Free</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Diabetic Medicines</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Vitamins, Minerals & Antioxidants</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Homeopathy Medicines</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_heading}>Diabetic Medicines</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_text}>Vitamins, Minerals & Antioxidants</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_text}>Homeopathy Medicines</NavLink>
                             </Box>
                         </Box>
 
                  
                     <Box className={styles.hover_sub_category_box}>
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Sugar Substitutes</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_heading}>Sugar Substitutes</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Diabetic Diet</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Juices & Vinegars</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Diabetic Nutrition Supplements</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_heading}>Diabetic Diet</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_text}>Juices & Vinegars</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_text}>Diabetic Nutrition Supplements</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Diabetic Foot Health</NavLink>
+                             <NavLink to={'/diabetesproduct'} state={'diabetes'} className={styles.hover_box_category_heading}>Diabetic Foot Health</NavLink>
                         </Box>
                         </Box>
                     </Box>
@@ -151,71 +151,71 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Healthcare Devices{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink to={'/healthdevice'} state={'healthcareDevices'}><Text>Healthcare Devices{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={styles.hover_box} >
                     <Box display='flex' gap={3}  padding='8px'>
                         <Box className={styles.hover_sub_category_box}   border='none'>
                             <Box  className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Top brands in Healthcare Devices</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Dr. Morepen Devices</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Accu-chek</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>OneTouch</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Omron</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Contour</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Dr Trust</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Top brands in Healthcare Devices</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'}className={styles.hover_box_category_text}>Dr. Morepen Devices</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_text}>Accu-chek</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_text}>OneTouch</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_text}>Omron</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_text}>Contour</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_text}>Dr Trust</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>BP Monitors</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>BP Monitors</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Oxygen Concentrators & Cans</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Oxygen Concentrators & Cans</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Weighing Scales</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>IR Thermometers</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Weighing Scales</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_text}>IR Thermometers</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Weighing Scales</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Weighing Scales</NavLink>
                             </Box>
                         </Box>
 
                  
                     <Box className={styles.hover_sub_category_box}>
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Masks (N95, Surgical and more)</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Face Shield</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Surgical Masks</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>N95 Masks</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Masks (N95, Surgical and more)</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_text}>Face Shield</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_text}>Surgical Masks</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_text}>N95 Masks</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Nebulizers & Vaporizers</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Nebulizers & Vaporizers</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Oximeters & Pedometers</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Oximeters & Pedometers</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Vital Signs Monitors & Wearables</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Vital Signs Monitors & Wearables</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Body Massager</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Body Massager</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Diabetes Monitors</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Diabetes Monitors</NavLink>
                         </Box>
 
 
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Mobility Equipments</NavLink>
+                             <NavLink to={'/healthdevice'} state={'healthcareDevices'} className={styles.hover_box_category_heading}>Mobility Equipments</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
@@ -255,7 +255,7 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Personal Care{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink to={'/personalcareproducts'} state={"skincare"}><Text>Personal Care{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={styles.hover_box} >
                     <Box display='flex' gap={3}  padding='8px'>
@@ -271,28 +271,28 @@ export const Dropdown=()=>{
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Skin Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Body Lotions</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mosquito Repellents</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Lip Balm</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Acne Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Bath Essentials</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Facewash</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Sunscreen</NavLink>
+                             <NavLink to={'/personalcareproducts/skincare'} state={"skincare"} className={styles.hover_box_category_heading}>Skin Care</NavLink>
+                             <NavLink to={'/personalcareproducts/skincare'} state={"skincare"} className={styles.hover_box_category_text}>Body Lotions</NavLink>
+                             <NavLink to={'/personalcareproducts/skincare'} state={"skincare"} className={styles.hover_box_category_text}>Mosquito Repellents</NavLink>
+                             <NavLink to={'/personalcareproducts/skincare'} state={"skincare"} className={styles.hover_box_category_text}>Lip Balm</NavLink>
+                             <NavLink to={'/personalcareproducts/skincare'} state={"skincare"} className={styles.hover_box_category_text}>Acne Care</NavLink>
+                             <NavLink to={'/personalcareproducts/skincare'} state={"skincare"} className={styles.hover_box_category_text}>Bath Essentials</NavLink>
+                             <NavLink to={'/personalcareproducts/skincare'} state={"skincare"} className={styles.hover_box_category_text}>Facewash</NavLink>
+                             <NavLink to={'/personalcareproducts/skincare'} state={"skincare"} className={styles.hover_box_category_text}>Sunscreen</NavLink>
                             </Box>
                         </Box>
 
                  
                     <Box className={styles.hover_sub_category_box}>
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Baby Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Baby & Infant Food</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Baby Diapers, wipes & more</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Nursing & Feeding</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Baby Bath Essentials</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Baby Skin Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Baby Healthcare</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Baby Oral Health</NavLink>
+                             <NavLink to={'/personalcareproducts/babycare'} state={"babycare"} className={styles.hover_box_category_heading}>Baby Care</NavLink>
+                             <NavLink to={'/personalcareproducts/babycare'} state={"babycare"} className={styles.hover_box_category_text}>Baby & Infant Food</NavLink>
+                             <NavLink to={'/personalcareproducts/babycare'} state={"babycare"} className={styles.hover_box_category_text}>Baby Diapers, wipes & more</NavLink>
+                             <NavLink to={'/personalcareproducts/babycare'} state={"babycare"} className={styles.hover_box_category_text}>Nursing & Feeding</NavLink>
+                             <NavLink to={'/personalcareproducts/babycare'} state={"babycare"} className={styles.hover_box_category_text}>Baby Bath Essentials</NavLink>
+                             <NavLink to={'/personalcareproducts/babycare'} state={"babycare"} className={styles.hover_box_category_text}>Baby Skin Care</NavLink>
+                             <NavLink to={'/personalcareproducts/babycare'} state={"babycare"} className={styles.hover_box_category_text}>Baby Healthcare</NavLink>
+                             <NavLink to={'/personalcareproducts/babycare'} state={"babycare"} className={styles.hover_box_category_text}>Baby Oral Health</NavLink>
                         </Box>
 
                         <Box className={styles.border}>
@@ -327,8 +327,8 @@ export const Dropdown=()=>{
 
                         <Box className={styles.hover_sub_category_box_last}>
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Men Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Men Grooming</NavLink>
+                             <NavLink to={'/personalcareproducts'} state={"mens"} className={styles.hover_box_category_heading}>Men Care</NavLink>
+                             <NavLink to={'/personalcareproducts'} state={"mens"} className={styles.hover_box_category_text}>Men Grooming</NavLink>
                             </Box>
 
                             <Box>
@@ -433,18 +433,18 @@ export const Dropdown=()=>{
 
 
             <Box className={styles.dropdown_category_hoverbox_container}>
-                <Box className={styles.main_category}><NavLink><Text>Ayurveda Products{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
+                <Box className={styles.main_category}><NavLink to={'/ayurvedicproduct'} state={'ayurvedic'}><Text>Ayurveda Products{" "}<ChevronDownIcon boxSize={4}/></Text></NavLink></Box>
 
                 <Box className={`${styles.hover_box} ${styles.ayurveda_box}`} >
                     <Box display='flex' gap={3}  padding='8px'>
                         <Box className={`${styles.hover_sub_category_box} `}   border='none'>
                             <Box  className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Ayurveda Top Brands</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Dabur</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Sri Sri Tattva</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Kerala Ayurveda</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Jiva Ayurveda</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Chyawanparash</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_heading}>Ayurveda Top Brands</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Dabur</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Sri Sri Tattva</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Kerala Ayurveda</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Jiva Ayurveda</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Chyawanparash</NavLink>
                             </Box>
 
                             <Box className={styles.border}>
@@ -452,42 +452,42 @@ export const Dropdown=()=>{
                             </Box>
 
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Popular categories</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Herbal Juice</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Ayurvedic Immunity Boosters</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Explore Popular Herbs</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Herbal Supplements</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_heading}>Popular categories</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Herbal Juice</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Ayurvedic Immunity Boosters</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Explore Popular Herbs</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Herbal Supplements</NavLink>
                             </Box>
                         </Box>
 
                  
                     <Box className={styles.hover_sub_category_box}>
                         <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Top Health Concerns</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Ayurvedic Respiratory care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Cough, Cold & Fever</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Sexual Wellness</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Bone, Joint and Muscle Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Stomach Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Diabetes Care.</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Liver Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Cardiac Care</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Mind Care</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_heading}>Top Health Concerns</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Ayurvedic Respiratory care</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Cough, Cold & Fever</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Sexual Wellness</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Bone, Joint and Muscle Care</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Stomach Care</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Diabetes Care.</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Liver Care</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Cardiac Care</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Mind Care</NavLink>
                         </Box>
                      </Box>
 
 
                         <Box className={styles.hover_sub_category_box_last}>
                             <Box className={styles.border}>
-                             <NavLink className={styles.hover_box_category_heading}>Unani Medicines</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Hamdard Unani</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>AMU Dawakhana</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Rex Remedies</NavLink>
-                             <NavLink className={styles.hover_box_category_text}>Dehlvi Remedies</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_heading}>Unani Medicines</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Hamdard Unani</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>AMU Dawakhana</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Rex Remedies</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_text}>Dehlvi Remedies</NavLink>
                             </Box>
 
                             <Box>
-                             <NavLink className={styles.hover_box_category_heading}>Ayurvedic Medicine</NavLink>
+                             <NavLink to={'/ayurvedicproduct'} state={'ayurvedic'} className={styles.hover_box_category_heading}>Ayurvedic Medicine</NavLink>
                             </Box>
                         </Box>
                     </Box>

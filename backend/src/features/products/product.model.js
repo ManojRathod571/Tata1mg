@@ -28,3 +28,4 @@ const productSchema = new mongoose.Schema(
 );
 let Product=mongoose.model("product", productSchema);
 module.exports = {Product} 
+
