@@ -15,56 +15,14 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 
-function Item() {
-  const [quantity, setQuantity] = useState(1);
-  const [data,setData] = useState([]);
- let totalPrice = 0
-
+function Item({data,removeOperation,incrementQuantity,decrementQuantity}) {
+  
  
-
-
-useEffect(()=>{
-    // setLoading(true);
-    getData()
-    
-    
-  },[])
-
-  const getData=()=>{
-    return axios.get("https://tan-real-buffalo.cyclic.app/smartphones").then((res)=>{
-       
-        setData(res.data)
-      
-      })
-      
-  }
-
-const removeOperation = (id)=>{
-    return (
-        axios.delete(`https://tan-real-buffalo.cyclic.app/smartphones/${id}`).then((res)=>{
-            setData(res.data)
-        //   setError(false)
-        getData()
-        })
-       
-    )
-    
-   
-}
-
-
-
-  console.log(data)
-
   return (
 
-    
-    <Box>
-      <Text fontSize="16px" color="#333">
-        Items NOT Requiring Prescription (1)
-      </Text>
-
-      {data && data.map((item)=>(
+    data.map((item)=>(
+        <Box>
+      
 
         <Box
         w="600px"
@@ -86,10 +44,10 @@ const removeOperation = (id)=>{
             
           >
             <Box>
-              <Text  w="60%" >Dr. Morepen Omega 3 Triple Strength 1250mg Deep Sea Fish Oil with DHA & EPA 900mg Softgel</Text>
+              <Text  w="60%" >{item.name}</Text>
             </Box>
             <Box>
-              <Text>₹128</Text>
+              <Text>₹{item.price1}</Text>
             </Box>
           </Box>
 
@@ -105,7 +63,7 @@ const removeOperation = (id)=>{
               <Text>tube of 100 ml Face Wash</Text>
             </Box>
             <Box>
-              MRP <Text as="s">₹150</Text>
+              MRP <Text as="s">₹{item.price2}</Text>
             </Box>
           </Box>
 
@@ -115,6 +73,7 @@ const removeOperation = (id)=>{
             fontSize="10px"
             mt="16px"
           >
+            {/*  */}
             <Box display="flex" mt="10px" cursor="pointer" onClick={()=>removeOperation(item.id)}>
               <Image
                 mr="4px"
@@ -125,18 +84,18 @@ const removeOperation = (id)=>{
               </Text>
             </Box>
             <Box display="flex" alignItems="center">
-             <button disabled={quantity==1}><Image
+             <Image
                 src="https://www.1mg.com/images/minus-cart.svg"
-                cursor="pointer" disable={quantity==1}
-                onClick={() => setQuantity(quantity - 1)}
-              /></button> 
+                cursor="pointer" 
+                onClick={() => decrementQuantity() }
+              />
               <Text color="#212121" fontSize="14px" mx="4px">
-                {quantity}
+                {item.quantity}
               </Text>
-              <Image disable={quantity==1}
+              <Image 
                 src="https://www.1mg.com/images/plus-cart.svg"
                 cursor="pointer"
-                onClick={() => setQuantity(quantity + 1)}
+                onClick={() => incrementQuantity() }
               />
             </Box>
             
@@ -150,11 +109,18 @@ const removeOperation = (id)=>{
 
     
       </Box>
-      ))}
+      
 
       
       <Divider/>
     </Box>
+
+))
+
+     
+
+
+    
   );
 }
 

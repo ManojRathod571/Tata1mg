@@ -12,7 +12,7 @@ import {
     Divider
   } from "@chakra-ui/react";
 
-function Bill() {
+function Bill({totalPrice,discountPrice}) {
   return (
     <Box mt="16px" shadow="0 1px 2px 0 rgb(0 0 0 / 20%)"  borderRadius="2px">
   <Box
@@ -33,7 +33,7 @@ function Bill() {
     >
         
             <Box ><Text>Item Total(MRP)</Text></Box>
-            <Box><Text>₹300</Text></Box>
+            <Box><Text>₹{totalPrice}</Text></Box>
             
     </Box>
     {/* <Divider/> */}
@@ -46,7 +46,7 @@ function Bill() {
     >
         
             <Box ><Text>Price Discount</Text></Box>
-            <Box><Text>-₹44</Text></Box>
+            <Box><Text>-₹{discountPrice}</Text></Box>
             
     </Box>
     <Divider />
@@ -71,7 +71,7 @@ function Bill() {
     >
         
             <Box ><Text>To be paid</Text></Box>
-            <Box><Text>₹256</Text></Box>
+            <Box><Text>₹{totalPrice-discountPrice}</Text></Box>
             
     </Box>
 
@@ -86,7 +86,7 @@ function Bill() {
     >
         
             <Box ><Text>Total Savings</Text></Box>
-            <Box color="#1aab2a" fontSize="14px" fontWeight={700} ><Text>₹44</Text></Box>
+            <Box color="#1aab2a" fontSize="14px" fontWeight={700} ><Text>₹{discountPrice}</Text></Box>
             
     </Box>
 
