@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Tata 1MG");
 });
 
-app.use("/user", userRoute);
+app.use("/auth", userRoute);
 app.use("/product", productRoute);
 app.use("/cart", cartRoute);
 

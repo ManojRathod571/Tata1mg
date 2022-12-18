@@ -1,6 +1,7 @@
 const express = require("express");
 const { find } = require("./product.model");
 const ProductModel = require("./product.model");
+const { adminValidation } = require("../middleware/adminValidation");
 
 module.exports = productRoute = express.Router();
 
@@ -63,8 +64,41 @@ productRoute.get("/", async (req, res) => {
   }
 });
 
-productRoute.post("/:id", (req, res) => {
-  const { id } = req.params;
+productRoute.get("/allproduct",adminValidation, async(req, res) => {
+      
   try {
+    
+    let AllProduct=await Product.find().limit(100)
+    res.send(AllProduct);
   } catch (error) {}
 });
+
+productRoute.post("/allproduct",adminValidation, async(req, res) => {
+      
+  try {
+    
+    let AllProduct=await Product.find()
+    res.send(AllProduct);
+  } catch (error) {}
+});
+
+productRoute.patch("/allproduct",adminValidation, async(req, res) => {
+      
+  try {
+    
+    let AllProduct=await Product.find()
+    res.send(AllProduct);
+  } catch (error) {}
+});
+
+
+productRoute.delete("/allproduct/:id",adminValidation, async(req, res) => {
+      
+  try {
+    
+    let AllProduct=await Product.find()
+    res.send(AllProduct);
+  } catch (error) {}
+});
+
+

@@ -9,6 +9,7 @@ const authMiddleWare = async (req, res, next) => {
   const token = req.headers.token;
   // console.log("Token", token);
   try {
+    
     if (!token) {
       return res.send("Token missing");
     } else {
