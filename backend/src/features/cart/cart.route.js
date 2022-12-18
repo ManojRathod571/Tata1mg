@@ -93,12 +93,10 @@ cartRoute.post("", async (req, res) => {
       }
     } else {
       if (Check(dbProduct, req.body.quantity)) {
-        console.log("True run");
         return res.send(
           `Database have only ${dbProduct.quantity} of this item`
         );
       } else {
-        console.log("False run");
         let cartItem = await Cart.create({
           ...req.body,
           user: req.userId,
