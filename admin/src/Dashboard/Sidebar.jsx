@@ -59,29 +59,6 @@ const SideBar = ({isOpen}) => {
                       </motion.div>
                     )}
                   </AnimatePresence>
-               
-                <NavLink
-                  to={ "/dashboard"}
-                  className={({ isActive }) =>
-                  isActive ? style.active: style.link
-                }
-                >
-                  <div className={style.icon}><MdOutlineDashboard /></div>
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        variants={showAnimation}
-                        initial="hidden"
-                        animate="show"
-                        exit="hidden"
-                        className={style.link_text}
-                      >
-                      DASHBOARD
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </NavLink>
-
                 <NavLink
                   to={"/reports"}
                   className={({ isActive }) =>

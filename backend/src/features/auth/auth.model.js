@@ -12,5 +12,5 @@ const userSchema = mongoose.Schema(
     gender: { type: String, enum: ["Male", "Female", "other"] },
   }
 );
-
-module.exports = UserModel = mongoose.model("user", userSchema);
+let UserModel= mongoose.model("testuser", userSchema);
+module.exports =  {UserModel}

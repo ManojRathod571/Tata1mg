@@ -9,8 +9,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import {logout} from "../store/Authreducer/action"
 
 const DashboardNav = ({ onOpen }) => {
-  // const user = useSelector((store) => store.auth.user.email);
-  //console.log(user);
+  const {admin} = useSelector((store) => store.Authreducer);
+  console.log(admin);
   const {isAdmin}=useSelector((store)=>store.Authreducer)
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -38,7 +38,7 @@ const DashboardNav = ({ onOpen }) => {
       </div>
      
       <div className={style.contanier_info}>
-        <div>{'user'}</div>
+        <div>{admin.email}</div>
         <div className={style.vertical_dotted_line}></div>
         <AiOutlineQuestionCircle size={21} />
         <div className={style.vertical_dotted_line}></div>

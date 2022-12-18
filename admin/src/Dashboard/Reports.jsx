@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/logo.png'
+import img from '../assets/reports.png'
 import "../App.css";
 import { useSelector } from 'react-redux';
 const Reports = () => {

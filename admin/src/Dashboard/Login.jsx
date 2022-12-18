@@ -37,7 +37,7 @@ import { Signin, Signin_failure } from "../store/Authreducer/action";
             if(res){
               alert(`Signin Successfull`)
               
-              navigate("/dashboard")
+              navigate("/products")
             }
             
             else{

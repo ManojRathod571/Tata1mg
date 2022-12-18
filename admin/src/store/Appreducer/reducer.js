@@ -1,9 +1,10 @@
-import { GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS} from "./action.type"
+import { GET_ALLUSERS_FAILURE, GET_ALLUSERS_REQUEST, GET_ALLUSERS_SUCCESS, GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS} from "./action.type"
 
 const initialState={
     isLoading:false,
     isError:false,
-    data:[]
+    data:[],
+    userdetail:[]
 }
 
 export const reducer=(state=initialState,{type,payload})=>{
@@ -30,11 +31,38 @@ export const reducer=(state=initialState,{type,payload})=>{
             ...state,
             isLoading:false,
             isError:false,
-            data:payload
+            data:payload.data
            
         }
     }
    
+
+    case(GET_ALLUSERS_REQUEST):{
+      
+        return{
+            ...state,
+            isLoading:true,
+            isError:false,
+        }
+    }
+    case(GET_ALLUSERS_FAILURE):{
+        return{
+            ...state,
+            isLoading:false,
+            isError:true,
+        }
+    }
+    case(GET_ALLUSERS_SUCCESS):{
+        
+        return{
+            ...state,
+            isLoading:false,
+            isError:false,
+           userdetail:payload
+           
+        }
+    }
+
     default:
         return state
 }
