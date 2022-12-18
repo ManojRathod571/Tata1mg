@@ -24,7 +24,9 @@ const CheckupCard = ({ something, prodVal = 5 }) => {
     };
 
     return (
-        <Box bg="white" p="2rem" border="solid 1px red" >
+        <Box bg="white" p="2rem" 
+            // border="solid 1px red" 
+        >
             <Carousel
                 swipeable={true}
                 draggable={true}
@@ -44,7 +46,7 @@ const CheckupCard = ({ something, prodVal = 5 }) => {
                     <Box
                         h={"90%"}
                         w={"80%"}
-                        border="solid 1px red"
+                        // border="solid 1px red"
                         p="0.5rem"
                         key={i}
                         textAlign="left"

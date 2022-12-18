@@ -83,7 +83,7 @@ class HealthCenter extends Component {
                         Disease Index starting with - {this.state.alphabet}
                     </Text>
                     <Box w="97%" margin="auto" padding="1.1%"
-                        border="solid 1px brown"
+                        // border="solid 1px brown"
                         boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;" backgroundColor="white">
                         {this.prepareAlphabets()}
 

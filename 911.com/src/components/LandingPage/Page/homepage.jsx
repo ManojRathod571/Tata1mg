@@ -173,7 +173,9 @@ const ALLProductsBrands = () => {
 
         {/* SUGAR */}
 
-        <Box mt="2rem" border="solid green 1px">
+        <Box mt="2rem" 
+          // border="solid green 1px"
+          >
           <Box w="85%" margin="auto"
             display="flex"
             justifyContent="space-between"
@@ -344,7 +346,9 @@ const ALLProductsBrands = () => {
 
         {/* Diabetic medicines */}
 
-        <Box mt="2rem" border="solid green 1px">
+        <Box mt="2rem" 
+          // border="solid green 1px"
+        >
           <Box w="85%" margin="auto"
             display="flex"
             justifyContent="space-between"
@@ -399,7 +403,9 @@ const ALLProductsBrands = () => {
 
         {/* LOZENGES */}
 
-        <Box mt="2rem" border="solid green 1px">
+        <Box mt="2rem" 
+          // border="solid green 1px"
+          >
           <Box w="85%" margin="auto"
             display="flex"
             justifyContent="space-between"
@@ -429,7 +435,9 @@ const ALLProductsBrands = () => {
 
         {/* In the Spotlight */}
 
-        <Box mt="2rem" border="solid green 1px" >
+        <Box mt="2rem" 
+          // border="solid green 1px" 
+        >
           <Box w="85%" margin="auto"
             display="flex"
             justifyContent="space-between"
@@ -459,7 +467,9 @@ const ALLProductsBrands = () => {
 
         {/* Calcium */}
 
-        <Box mt="2rem" border="solid green 1px">
+        <Box mt="2rem" 
+          // border="solid green 1px"
+          >
           <Box w="85%" margin="auto"
             display="flex"
             justifyContent="space-between"
@@ -517,7 +527,9 @@ const ALLProductsBrands = () => {
         {/* Trending */}
 
 
-        <Box mt="2rem" border="solid green 1px">
+        <Box mt="2rem" 
+          // border="solid green 1px"
+        >
           <Box w="85%" margin="auto"
             display="flex"
             justifyContent="space-between"
@@ -548,7 +560,9 @@ const ALLProductsBrands = () => {
 
         {/* Deals */}
 
-        <Box mt="2rem" border="solid green 1px">
+        <Box mt="2rem" 
+          // border="solid green 1px"
+          >
           <Box w="85%" margin="auto"
             display="flex"
             justifyContent="space-between"
@@ -579,7 +593,9 @@ const ALLProductsBrands = () => {
 
         {/* Super Saving Deals (LOZENGES data) */}
 
-        <Box mt="2rem" border="solid green 1px">
+        <Box mt="2rem" 
+          // border="solid green 1px"
+        >
           <Box w="85%" margin="auto"
             display="flex"
             justifyContent="space-between"
