@@ -2,15 +2,13 @@
 .diseaseBox{
     background: #f8f8f8;
     padding-bottom: 100px;
-    /* border: solid 1px rgb(81, 0, 255); */
-    /* color: red; */
 }
 
 .Grid {
     width: 80%;
     margin: auto;
     margin-top: 30px;
-    border: solid 1px red;
+    /* border: solid 1px red; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -22,7 +20,7 @@
 }
 
 .Data {
-    border: solid 1px green;
+    /* border: solid 1px green; */
     background-color: white;
     padding: 2%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

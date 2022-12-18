@@ -49,7 +49,7 @@ class HealthCenter extends Component {
                         <Box
                             // border="solid 1px yellow" 
                             paddingLeft="10px">
-                            <Text fontSize="17px" color="black" textAlign="start" fontWeight="500">
+                            <Text fontSize="17px" color="rgb(100,90,80)" textAlign="start" fontWeight="600">
                                 {item.name}
                                 {/* <a href={item.link}>a</a> */}
                             </Text>
