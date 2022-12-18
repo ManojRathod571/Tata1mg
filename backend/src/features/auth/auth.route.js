@@ -1,20 +1,24 @@
 const express = require("express");
 var jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const userModel = require("./auth.model");
+const {UserModel}= require("./auth.model");
+const { adminValidation } = require("../middleware/adminValidation");
 
 module.exports = userRoute = express.Router();
 
 userRoute.post("/signup", async (req, res) => {
   const { email, password, name, phonenumber, address, pincode, gender } = req.body;
-
+console.log(req.body);
   try {
-    const user = await userModel.findOne({ email });
-    if (user) {
+   const user = await UserModel.find({ email });
+
+
+    if (user.length>0) {
       res.send({"msg":"User already exits, Please try login"});
     } else {
       bcrypt.hash(password, 6, async (err, hashedPassword) => {
-        await userModel.create({
+  
+        await UserModel.create({
           email,
           password: hashedPassword,
           name,
@@ -22,6 +26,7 @@ userRoute.post("/signup", async (req, res) => {
           address,
           pincode,
           gender,
+          role:"user"
         });
         res.status(200).send({"msg":"Sign up successfully"});
       });
@@ -36,8 +41,8 @@ userRoute.post("/login", async (req, res) => {
 
   const {email,password}=req.body;
   try {
-      const user =await userModel.find({email})
-      const userData=await userModel.findOne({email}).select({"password":0,_id:0})
+      const user =await UserModel.find({email})
+      const userData=await UserModel.findOne({email}).select({"password":0,_id:0})
      // console.log(user);
      
       if(user.length>0){
@@ -47,7 +52,7 @@ userRoute.post("/login", async (req, res) => {
               // result == 
              // console.log(password===hash_password,result);
               if(result){
-                  var token = jwt.sign({ "userId": user[0]._id }, process.env.SECRET_KEY,{expiresIn:'24h'});
+                  var token = jwt.sign({ "userId": user[0]._id }, process.env.SECRET_KEY);
                   res.send({"msg":"login successfull","login":true,"token":token,"user":userData})
                  
               }
@@ -64,9 +69,41 @@ userRoute.post("/login", async (req, res) => {
       console.log(error)
   }
  
+  userRoute.get("/alluser",adminValidation ,async (req, res) => {
+
+      try {
+        let users=await UserModel.find({})
+       // console.log(users);
+        res.send(users)
+      } catch (error) {
+        res.send({"msg":"something Went wrong "})
+      }        
+  });
+
+
+  userRoute.delete("/deleteuser/:id",adminValidation ,async (req, res) => {
+        const {id}=req.params
+    try {
+      await UserModel.findByIdAndRemove({_id:id})
+      res.send({"msg":"User removed successfully !"})
+    } catch (error) {
+      res.send({"msg":"something Went wrong "})
+
+    }                              
+  });
+
+  // email:'admin911@gmail.com',
+  // password: hashedPassword='admin@911',
+  // name:"Admin",
+  // phonenumber:"6204591216",
+  // address:'',
+  // pincode:853204,
+  // gender:"Male",
+  // role:'admin'
+
   // const { email, password } = req.body;
   // try {
-  //   let user = await userModel.findOne({ email });
+  //   let user = await UserModel.findOne({ email });
   //   if (!user) {
   //     return res.status(404).send("Please Signup first");
   //   } else {
@@ -115,4 +152,5 @@ userRoute.post("/login", async (req, res) => {
 //   }
  
  
+
 // })

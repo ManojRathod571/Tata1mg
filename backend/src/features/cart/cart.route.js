@@ -3,12 +3,13 @@ const cartRoute = express.Router();
 const jwt = require("jsonwebtoken");
 const User = require("../auth/auth.model");
 const Cart = require("./cart.model");
-const product = require("../products/product.model");
+const {Product} = require("../products/product.model");
 
 const authMiddleWare = async (req, res, next) => {
   const token = req.headers.token;
   // console.log("Token", token);
   try {
+    
     if (!token) {
       return res.send("Token missing");
     } else {
@@ -92,12 +93,10 @@ cartRoute.post("", async (req, res) => {
       }
     } else {
       if (Check(dbProduct, req.body.quantity)) {
-        console.log("True run");
         return res.send(
           `Database have only ${dbProduct.quantity} of this item`
         );
       } else {
-        console.log("False run");
         let cartItem = await Cart.create({
           ...req.body,
           user: req.userId,
