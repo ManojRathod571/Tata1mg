@@ -1,0 +1,86 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+    .singupform_cont{
+  width: 50%;
+  /* height: 400px; */
+  background: white;
+ /* border: 1px solid black; */
+ border-radius: 1rem;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 2rem;
+
+    }
+   .h1_cont{
+    width: 74%;
+    margin: auto;
+   }
+  .input{
+        display: block;
+        width: 72%;
+        padding: 18px 0px 18px 11px;
+        margin: auto;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        background-color: #fff;
+    border: 1px solid #727483;
+    /* color: #141d38; */
+    
+    font-size: 16px;
+    font-weight: 400;
+
+    }
+    .input:focus{
+        outline-color: blue;
+    }
+    .seen{
+        position: absolute;
+        right: 90px;
+        top: 18px;    
+        cursor: pointer; 
+    }
+    .h1{      
+        margin-bottom: 22px;      
+        color: #141D38;
+        font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 32px;
+    font-weight: 500;   
+    }
+
+   
+   .login{
+        display: block;
+        margin: auto;
+        width: 72%;
+        border: none;
+        background-color: #ff6f61;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 21px 0px;
+        border-radius: 10px;
+    }
+   
+    .login:hover{
+        cursor: pointer;
+        background-color: #f35547;
+    }
+
+    .form{
+        text-align: center;
+        margin-top: 30px;
+        font-family: "Centra No1", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size:14px;
+    font-weight: 400;
+  
+    }
+
+    
+.pass{
+    position: relative;
+    /* border: 1px solid black; */
+   
+}
+  

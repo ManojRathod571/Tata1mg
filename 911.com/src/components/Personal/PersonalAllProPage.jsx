@@ -1,48 +1,35 @@
 
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Button, ButtonGroup, Card, CardFooter, Grid, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const ProductsCard = ({ something, prodVal = 6 }) => {
+const PersonalAllProCard = ({ something, prodVal = 6 }) => {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
             items: prodVal,
-            slidesToSlide: 3, // optional, default to 1.
+            slidesToSlide: 3, 
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
             items: 3,
-            slidesToSlide: 2, // optional, default to 1.
+            slidesToSlide: 2, 
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
             items: 1,
-            slidesToSlide: 1, // optional, default to 1.
+            slidesToSlide: 1, 
         },
     };
 
     return (
-        <Box bg="white" p="1rem" height="400px">
-            <Carousel
-                swipeable={true}
-                draggable={true}
-                responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
-                infinite={true}
-                autoPlaySpeed={3000}
-                keyBoardControl={true}
-                customTransition="300ms"
-                transitionDuration={300}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-            >
+        <Box bg="white" p="1rem" height="400px" width={"1200px"} border="1x solid green">
+<Grid templateColumns='repeat(5, 1fr)' gap={1} margin={"auto"}>
+
                 {something.map((e, i) => (
                     <Box
-                        h={"auto"}
+                        h={"370px"}
+                        w={"250px"}
                         // border="solid red 1px"
                         p="0.5rem"
                         key={i}
@@ -55,7 +42,7 @@ const ProductsCard = ({ something, prodVal = 6 }) => {
                         }}
                         cursor="pointer"
                     >
-                        <Image h={"auto"} w={"auto"} m="auto" marginBottom={"3px"} src={e.img} />
+                        <Image h={"40%"} w={"auto"} m="auto" marginBottom={"3px"} src={e.img} />
                         <Box>
                             <Text fontSize={"16px"} marginTop={"4px"}>{e.name}</Text>
                             <Text fontSize={"13px"} marginTop={"4px"}>{e.qty}</Text>
@@ -64,19 +51,42 @@ const ProductsCard = ({ something, prodVal = 6 }) => {
                                 <span style={{ textDecoration: "line-through" }}>
                                     ₹{e.strikePrice}
                                 </span>
-                                <span style={{ color: "green", 
-                                marginLeft: "1rem" 
+                                <span style={{
+                                    color: "green",
+                                    marginLeft: "1rem"
                                 }}>
                                     {e.discount}
                                 </span>
                             </Text>
                             <Text fontWeight={"600"} marginTop={"4px"}>₹ {e.price}</Text>
                         </Box>
+                        <Card>
+                            <CardFooter>
+                                <ButtonGroup spacing='2'>
+                                    <Button variant='solid' colorScheme='purple'>
+                                    Add to cart
+                                    </Button>
+                                   
+                                </ButtonGroup>
+                            </CardFooter>
+                        </Card>
+
                     </Box>
+
                 ))}
-            </Carousel>
+
+              </Grid>
+
+
+            
         </Box>
     );
 };
 
-export default ProductsCard;
+export default PersonalAllProCard;
+
+
+
+
+
+

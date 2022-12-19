@@ -1,0 +1,162 @@
+/* .singleCard{
+    width: 22%;
+    border: 1px solid rgb(230, 7, 7);
+} */
+
+.info_box{
+    padding: 10px;
+    /* position: relative; */
+}
+.info_box>div{
+margin-top: 10px;
+width: 100%;
+z-index: 100;
+}
+.title{
+    font-weight: 600;
+    font-family: Open Sans,sans-serif;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #4f585e;
+}
+.offPrice_prcnt{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+}
+.ofprice{
+    font-family: Open Sans,sans-serif;
+    font-size: 16px;
+    color: #4f585e;
+    text-decoration: line-through;
+}
+.price{
+    margin-top: 10px;
+    font-family: Open Sans,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4f585e;
+}
+.stock{
+    font-family: Open Sans,sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    color: #4f585e;
+}
+.update_box{
+    display: flex;
+  
+    justify-content: space-between;
+   
+}
+.add_product_cont{
+    /* position: relative; */
+   
+    background-color: white;
+}
+.close_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(194, 50, 50);
+    color: white;
+}
+.addform{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width:25em;
+    z-index: 100;
+    position: absolute;
+    padding: 12px;
+    bottom: 30%;
+    display: none;
+    left: 30%;
+    align-items: center;
+    /* pointer-events: none; */
+    justify-content: center;
+    background-color: white;
+}
+.update_box>button:first-child{
+  color: white;
+    background-color: #ff6f61;
+    border: none;
+}
+.update_box>button{
+    padding: 5px;
+    color: white;
+    background-color: #ff6f61;
+    border: none;
+    cursor: pointer;
+}
+.category{
+    margin-top: 10px;
+    font-family: Open Sans,sans-serif;
+    font-size: 16px;
+    color: #4f585e;
+    font-weight: 500;
+}
+.addformopen{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width:25em;
+    position: absolute;
+    padding: 12px;
+    top: 15%;
+    display: flex;
+    left: 30%;
+    z-index: 100;
+    align-items: center;
+    /* pointer-events: none; */
+    justify-content: center;
+    background-color: white;
+}
+form{
+    /* border: 1px solid black; */
+    width: 90%;
+    margin: auto;
+}
+.input{
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+.lable{
+    font-weight: 600;
+    font-family: Open Sans,sans-serif;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #4f585e;
+}
+.input{
+    width: 90%;
+    padding: 7px;
+}
+.input:focus{
+    outline-color: blue;
+}
+.add_product_btn{
+    background-color: #ff6f61;
+    padding: 0.5rem 3rem;
+border-radius: 0.2rem;
+    font-size: 16px;
+    border:none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.form_add_btn{
+    width: 90%;
+    padding: 7px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 11px;
+    font-size: 16px;
+    border:none;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #ff6f61;
+}

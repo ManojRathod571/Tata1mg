@@ -43,7 +43,7 @@ const CamboCard = ({ something, prodVal = 6 }) => {
                 {something.map((e, i) => (
                     <Box
                         h={"90%"}
-                        border="solid red 1px"
+                        // border="solid red 1px"
                         p="0.5rem"
                         key={i}
                         textAlign="left"

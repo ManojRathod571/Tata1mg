@@ -49,7 +49,7 @@ class HealthCenter extends Component {
                         <Box
                             // border="solid 1px yellow" 
                             paddingLeft="10px">
-                            <Text fontSize="17px" color="black" textAlign="start" fontWeight="500">
+                            <Text fontSize="17px" color="rgb(100,90,80)" textAlign="start" fontWeight="600">
                                 {item.name}
                                 {/* <a href={item.link}>a</a> */}
                             </Text>
@@ -83,7 +83,7 @@ class HealthCenter extends Component {
                         Disease Index starting with - {this.state.alphabet}
                     </Text>
                     <Box w="97%" margin="auto" padding="1.1%"
-                        border="solid 1px brown"
+                        // border="solid 1px brown"
                         boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;" backgroundColor="white">
                         {this.prepareAlphabets()}
 

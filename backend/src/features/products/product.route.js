@@ -1,11 +1,12 @@
 const express = require("express");
-const { find } = require("./product.model");
-const ProductModel = require("./product.model");
+const { find, findByIdAndDelete } = require("./product.model");
+const {Product} = require("./product.model");
+const { adminValidation } = require("../middleware/adminValidation");
 
 module.exports = productRoute = express.Router();
 
 productRoute.get("/", async (req, res) => {
-  const { category, q, limit, page, sort, off, firstletter } = req.query;
+  const { category, q, limit, page=1, sort, off, firstletter } = req.query;
   if (category && sort) {
     if (sort == "asc") {
       let temp = await Product.find({ category: category })
@@ -42,13 +43,13 @@ productRoute.get("/", async (req, res) => {
       res.send(temp);
     }
   } else if (category) {
-    let product = await ProductModel.find({ category: category })
+    let product = await Product.find({ category: category })
       .limit(limit)
       .skip((page - 1) * limit);
     res.send(product);
   } else if (q) {
     let query = new RegExp(q, "i");
-    let searches = await ProductModel.find({ name: query });
+    let searches = await Product.find({ name: query });
     console.log(searches);
     res.send(searches);
   } else if (firstletter) {
@@ -63,8 +64,54 @@ productRoute.get("/", async (req, res) => {
   }
 });
 
-productRoute.post("/:id", (req, res) => {
-  const { id } = req.params;
+productRoute.get("/allproduct",adminValidation,async(req, res) => {
+      let load=req.query.num || 1;
   try {
-  } catch (error) {}
+    
+    let AllProduct=await Product.find({}).limit(100*load)
+  
+    res.send(AllProduct);
+  } catch (error) {
+    console.log(error);
+    res.status(404).send({"msg":"something went wrong"})
+  }
 });
+
+productRoute.post("/allproduct",adminValidation, async(req, res) => {
+      
+  try {
+    
+    await Product.insertMany()
+    res.send("done");
+  } catch (error) {
+    res.send({"msg":"something went wrong"})
+  }
+});
+
+productRoute.patch("/allproduct",adminValidation, async(req, res) => {
+      
+  try {
+    
+    let AllProduct=await Product.find()
+    res.send(AllProduct);
+  } catch (error) {
+    res.send({"msg":"something went wrong"})
+  }
+});
+
+
+productRoute.delete("/allproduct/:id", adminValidation,async(req, res) => {
+      let {id}=req.params;
+     console.log('hello')
+  try {
+    
+ await Product.findByIdAndRemove({_id:id})
+     // console.log(prod);
+    res.send({"msg":"Product removed successfully !"})
+  } catch (error) {
+    console.log(error);
+     res.send({"msg":"something went wrong"})
+  }
+});
+
+

@@ -6,7 +6,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const BrandsCard = ({ something }) => {
+const PersonalBrandsCard = ({ something }) => {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -46,7 +46,7 @@ const BrandsCard = ({ something }) => {
 
                     <Box
                         key={i}
-                        h="95%"
+                        h="60%"
                         p="1rem"
                         textAlign="center"
                         borderRadius="5px"
@@ -57,7 +57,7 @@ const BrandsCard = ({ something }) => {
                         cursor="pointer"
                     >
                         <Link href="http://localhost:3000/products" target="_blank" textDecoration="none" textColor="gray">
-                            <Image w={"70%"} m="auto" src={e.img} />
+                            <Image w={"40%"} m="50%" src={e.img} />
                             <Text fontSize={"17px"}>{e.title}</Text>
                         </Link>
                     </Box>
@@ -67,4 +67,4 @@ const BrandsCard = ({ something }) => {
     );
 };
 
-export default BrandsCard;
+export default PersonalBrandsCard;

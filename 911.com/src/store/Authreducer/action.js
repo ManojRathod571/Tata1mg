@@ -6,7 +6,7 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS, SIGNUP_FAI
 export const Signup=(payload)=>(dispatch)=>{
    console.log(payload);
     dispatch(Signup_request())
-        return  axios.post(`${url}/user/signup`, payload).then((res)=>{
+        return  axios.post(`${url}/auth/signup`, payload).then((res)=>{
           console.log(res.data)
             dispatch({ type: SIGNUP_SUCCESS });
             return (res.data.msg)
@@ -32,7 +32,7 @@ export const Signin=(payload)=>(dispatch)=>{
     //console.log(payload);
      dispatch(Signin_request())
  
-         return  axios.post(`${url}/user/login`, payload).then((res)=>{
+         return  axios.post(`${url}/auth/login`, payload).then((res)=>{
           console.log(res,'pot')
              dispatch({ type: LOGIN_SUCCESS,payload:res.data});
 
