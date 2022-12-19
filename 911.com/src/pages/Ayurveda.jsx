@@ -1,13 +1,10 @@
 import { Box, Button, Image, Link, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
-import { AFeaturedBrands, ApopularCategories, ApopularCats, AShopbyhealthconcerns } from "../components/Ayurveda/AyurvedData";
-import BrandsCard from "../components/HealthBrandCard";
-// import Popularcategories from "../../comonents/Ayurveda/AyurvedaPopularCard";
-// import { FeaturedBrands, popularCategories } from "../../comonents/Ayurveda/AyurvedData";
-// import BrandsCard from "../cards/BrandCard";
+import ABrandsCard from "../components/Ayurveda/AyuevedaBrandCard";
+import AyurvedaAllPro from "../components/Ayurveda/AyurvedaAllPro";
+import { AFeaturedBrands, ApopularCategories, ApopularCats, AShopbyhealthconcerns, AyurAllProducts } from "../components/Ayurveda/AyurvedData";
 
-// import ProductsCard from "../cards/ProductsCard";
-// import { Shopbyhealthconcerns, topSellingProducts } from "../Data/products.data";
+
 
 
 export const AyurvedaPage = () =>{
@@ -47,7 +44,7 @@ export const AyurvedaPage = () =>{
                   </Button>
                 </Link>
               </Box>
-              <BrandsCard something={AShopbyhealthconcerns} />
+              <ABrandsCard something={AShopbyhealthconcerns} />
             </Box>
 
             <Box p="1rem">
@@ -79,7 +76,7 @@ export const AyurvedaPage = () =>{
               </Button>
             </Link>
           </Box>
-          <BrandsCard something={AFeaturedBrands} />
+          <ABrandsCard something={AFeaturedBrands} />
         </Box>
 
 
@@ -116,6 +113,35 @@ export const AyurvedaPage = () =>{
           </Box>
           <ApopularCats something={ApopularCategories} />
         </Box>
+
+
+        <Box mt="2rem">
+              <Box w="85%" margin="auto"
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                mb="0.5rem"
+              >
+                <Text fontWeight={"400"} lineHeight={"26px"} fontSize={"22px"}>
+                All Products
+                </Text>
+                <Link href="http://localhost:3000/allProducts" target="_blank" textDecoration="none">
+                  <Button
+                    bgColor="#ff6f61"
+                    _hover={{ bg: "#ff6f61" }}
+                    width="fit-content"
+                    color="white"
+                    borderColor="transparent"
+                    borderRadius="5px"
+                    cursor="pointer"
+                    padding="10px"
+                  >
+                    SEE ALL
+                  </Button>
+                </Link>
+              </Box>
+              <AyurvedaAllPro something={AyurAllProducts} />
+            </Box>
 
           </Box>
         </Box>

@@ -1,13 +1,9 @@
 import { Box, Button, Image, Link, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
-import { PersonalFeaturedBrands, personalPopularCategories, topSellingProducts } from "../components/Personal/PersonalData";
+import PersonalAllProCard from "../components/Personal/PersonalAllProPage";
+import { PAllProducts, PersonalFeaturedBrands, personalPopularCategories, topSellingProducts } from "../components/Personal/PersonalData";
 import { PersonalPopularcategoriesCard } from "../components/Personal/PersonalPopularCategories";
 import { PersonalProductsCard } from "../components/Personal/PersonalProductCard";
-// import PersonalBrandsCard from "../../comonents/Personal/PersonalBrandCard";
-// import { PersonalFeaturedBrands, PersonalPopularCategories, topSellingProducts } from "../../comonents/Personal/PersonalData";
-// import { PersonalPopularcategoriesCard } from "../../comonents/Personal/PersonalPopularCategories";
-// import { PersonalProductsCard } from "../../comonents/Personal/PersonalProductCard";
-
 
 
 
@@ -125,6 +121,35 @@ export const PersonalCarePage = () => {
                     />
                 </Box>
            
+
+                <Box mt="2rem">
+              <Box w="85%" margin="auto"
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                mb="0.5rem"
+              >
+                <Text fontWeight={"400"} lineHeight={"26px"} fontSize={"22px"}>
+                All Products
+                </Text>
+                <Link href="http://localhost:3000/allProducts" target="_blank" textDecoration="none">
+                  <Button
+                    bgColor="#ff6f61"
+                    _hover={{ bg: "#ff6f61" }}
+                    width="fit-content"
+                    color="white"
+                    borderColor="transparent"
+                    borderRadius="5px"
+                    cursor="pointer"
+                    padding="10px"
+                  >
+                    SEE ALL
+                  </Button>
+                </Link>
+              </Box>
+              <PersonalAllProCard something={PAllProducts} />
+            </Box>
+
             </Box>
         </Box>
     );
