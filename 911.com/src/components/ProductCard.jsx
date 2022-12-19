@@ -80,7 +80,7 @@ const ProductCard = ({quantity,price2,price1,off,name,image,category,id}) => {
     <div className={style.singlecard}>
        
     <div>
-        <img style={{height:'14rem'}} src={image} alt={name} />
+        <img style={{height:'11rem'}} src={image} alt={name} />
     </div>
     <div className={style.info_box}>
     <h4 className={style.title}>{name}</h4>
