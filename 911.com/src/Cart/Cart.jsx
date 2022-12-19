@@ -13,15 +13,98 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon, InfoOutlineIcon, LockIcon } from "@chakra-ui/icons";
 import { MdLocationOn } from "react-icons/md";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
 import CartNavBar from "./CartNavBar";
 import Coupon from "./Coponents/Coupon";
 import Bill from "./Coponents/Bill";
 import Item from "./Coponents/Item"
 
-import Adress from "./Adress";
+// import Adress from "./Adress";
 
 function Cart() {
+  const [data,setData] = useState([]);
+  // const [quantity, setQuantity] = useState(1);
+  
+  let totalPrice = data.reduce((a,c)=>a+(c.price1*c.quantity),0) || 0
+  let discountPrice = data.reduce((a,c)=>a+((c.price2-c.price1)*c.quantity),0) || 0
+
+
+  useEffect(()=>{
+    getData()   
+  },[])
+
+
+  // async function removeOperation(id)
+  // {
+  //   let result = await fetch(`https://tan-real-buffalo.cyclic.app/smartphones/${id}`,{
+  //     method:'DELETE'
+  //   })
+
+  //   result = await result.json();
+  //   console.warn(result)
+  //   getData()
+  // }
+
+
+  // async function getData(){
+  //   let result = await fetch("https://tan-real-buffalo.cyclic.app/smartphones");
+  //   result = await result.json();
+  //   setData(result)
+  // }
+
+  
+const removeOperation = (id)=>{
+  return (
+    axios.delete(`http://localhost:8000/cart/${id}`).then((res)=>{
+      console.log(res)
+}).finally(()=>{
+  getData()
+})
+
+)
+       
+}
+
+const getData=()=>{
+  return axios.get("http://localhost:8000/cart").then((res)=>{
+      setData(res.data)
+     
+    })
+    
+}
+
+const incrementQuantity=(id)=>{
+  return axios.post("http://localhost:8000/cart",{
+    "id":id, 
+    "quantity":"1", 
+    "type":"inc"
+  }).finally(()=>{
+    getData()
+  })
+}
+
+const decrementQuantity=(id)=>{
+  return axios.post("http://localhost:8000/cart",{
+    "id":id, 
+    "quantity":"1", 
+    "type":"dec"
+  }).finally(()=>{
+    getData()
+  })
+}
+
+
+// const incrementQuantity=()=>{
+//   setQuantity(quantity + 1)
+// }
+
+// const decrementQuantity=()=>{
+//   setQuantity(quantity - 1)
+// }
+
   return (
     <Box backgroundColor="#f8f8f8FF">
       <CartNavBar />
@@ -29,7 +112,23 @@ function Cart() {
       <Box width="80%" margin="auto" py="30px">
         <Box display="flex" w="fit-content" gap={8} margin="auto">
           {/* Left section */}
-          <Item/>
+          <Box>     
+          <Text fontSize="16px" color="#333">
+        Items NOT Requiring Prescription ({data.length})
+       
+      </Text>
+             
+            <Item data={data}
+            removeOperation={removeOperation}
+            incrementQuantity={incrementQuantity}
+            decrementQuantity={decrementQuantity}
+            
+            />
+
+</Box>
+
+    
+          
 
           {/* Right Section */}
           <Box>
@@ -37,7 +136,9 @@ function Cart() {
 
             {/* bill */}
 
-            <Bill />
+            <Bill totalPrice={totalPrice}
+            discountPrice={discountPrice}
+            />
 
             {/* checkout button */}
 
