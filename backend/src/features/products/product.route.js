@@ -6,7 +6,7 @@ const { adminValidation } = require("../middleware/adminValidation");
 module.exports = productRoute = express.Router();
 
 productRoute.get("/", async (req, res) => {
-  const { category, q, limit, page, sort, off, firstletter } = req.query;
+  const { category, q, limit, page=1, sort, off, firstletter } = req.query;
   if (category && sort) {
     if (sort == "asc") {
       let temp = await Product.find({ category: category })

@@ -18,12 +18,14 @@ import {
   import { useState } from "react";
   import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
   import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { Link as NavigateLink } from "react-router-dom";
 import { Signin, Signin_failure } from "../store/Authreducer/action";
   
   export default function Login() {
+    let location = useLocation();
+   
     const [showPassword, setShowPassword] = useState(false);
     const dispatch = useDispatch();
     const navigate=useNavigate()
@@ -40,7 +42,7 @@ import { Signin, Signin_failure } from "../store/Authreducer/action";
         });
       
     };
-  
+    console.log(location)
     const handleSignup = (e) => {
       e.preventDefault();
       if(!isAuth){
